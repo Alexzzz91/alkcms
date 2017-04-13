@@ -1,0 +1,39 @@
+@mixin st-button ( $height: 30px, $bg: $green, $icon: null, $icon-position: left, $hzsp: 9px, $font-size: 14px ) {
+    $selector: if($icon-position == left, '&::before', '&::after');
+
+    padding: 0 $hzsp;
+    border: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: $font-size;
+    height: $height;
+    line-height: $height;
+    font-weight: 700;
+    color: $white;
+    background-color: $bg;
+
+    & + * {
+        margin-left: 9px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: lighten($bg, 0.7);
+    }
+
+    @if ($icon) {
+        #{$selector} {
+            content: ' ';
+            display: inline-block;
+            vertical-align: middle;
+            width: 11px;
+            height: 11px;
+            background: $bg url('../img/' + $icon + '.png') 0 0 no-repeat;
+            margin-right: 7px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+extends ./layout/page
+
+block title
+    title= pageTitle
+block headerTitle
+  span.mdl-layout-title Отзывы для сайта "на цепи"
+block content
+    section.demo-charts.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
+      .mdl-card.mdl-cell.mdl-cell--12-col
+        .mdl-card__supporting-text
+          h4 profile #{user.username}
+          form(action='#')
+            .alk-image-avatar
+              label(for='sample1') Изображение в шапке
+              //img(src="#{user.avatar}")
+            .mdl-textfield.long.mdl-js-textfield
+              input#sample1.mdl-textfield__input(type='text', value='#{address}')
+              label.mdl-textfield__label(for='sample1') Адресс
+            .mdl-textfield.long.mdl-js-textfield
+              input#sample2.mdl-textfield__input(type='text', value='#{number}')
+              label.mdl-textfield__label(for='sample2') 
+              span.mdl-textfield__error некорректный номер
+            .mdl-textfield.long.mdl-js-textfield
+              textarea#sample3.mdl-textfield__input #{text}
+              label.mdl-textfield__label(for='sample3') текст на главной
+            .mdl-textfield.long.mdl-js-textfield
+              input#sample4.mdl-textfield__input(type='text', value='#{instagramm}')
+              label.mdl-textfield__label(for='sample4') ссылка на инстаграмм
+            .mdl-textfield.long.mdl-js-textfield
+              input#sample5.mdl-textfield__input(type='text', value='#{vk}')
+              label.mdl-textfield__label(for='sample5') ссылка на ВК
+            .mdl-textfield.long.mdl-js-textfield
+              input#sample6.mdl-textfield__input(disabled='true', type='text', value='#{user.updateDate}')
+              label.mdl-textfield__label(for='sample6') Дата обновления
+        .mdl-card__actions.right-actions
+          button.mdl-button.mdl-button.mdl-js-button.mdl-button--primary#save Сохранить
+    script(src="/js/rewiews.js")

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='description', content='A front-end template that helps you build fast, modern mobile web apps.')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
+        block title
+        meta(name='mobile-web-app-capable', content='yes')
+        link(rel='icon', sizes='192x192', href='images/android-desktop.png')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style', content='black')
+        meta(name='apple-mobile-web-app-title', content='Material Design Lite')
+        link(rel='apple-touch-icon-precomposed', href='images/ios-desktop.png')
+        meta(name='msapplication-TileImage', content='images/touch/ms-touch-icon-144x144-precomposed.png')
+        meta(name='msapplication-TileColor', content='#3372DF')
+        link(rel='shortcut icon', href='images/favicon.png')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+        link(rel='stylesheet', href='/css/material.indigo-deep_purple.min.css')
+        link(rel='stylesheet', href='/css/styles.css')
+        link(rel='stylesheet' href="/vendor/bower_components/bootstrap/dist/css/bootstrap.css")
+        link(rel='stylesheet' href="/css/app.css")
+        block css
+        script(src="/vendor/bower_components/jquery/dist/jquery.js")
+        //- script(src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js")
+        //- script(src="/vendor/bower_components/jquery-ui/jquery-ui.min.js")
+        script(src='/js/material.min.js')
+        script(src='/js/app.js')
+        style.
+          #view-source {
+          position: fixed;
+          display: block;
+          right: 0;
+          bottom: 0;
+          margin-right: 40px;
+          margin-bottom: 40px;
+          z-index: 900;
+          }
+    body.mdl-demo.mdl-color--grey-100.mdl-color-text--grey-700.mdl-base(class=user ? 'authed' : 'anon')
+      .loader-wrapper
+        .loader
+          svg(width='350', height='200', viewbox='0 0 350 200')
+            path.lt(d='M 100 50 L 50 100 L 100 150')
+            path.slash(d='M 150 175 L 200 25')
+            path.gt(d='M 250 50 L 300 100 L 250 150')
+            text(x="30" y="250" font-family="Verdana" font-size="15" fill='#fff') nodejs думает и сейчас что то сделает)))
+        .loader-section.section-left
+        .loader-section.section-right
+        script(type='text/javascript').
+      .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+        header.mdl-layout__header.mdl-layout__header--scroll.mdl-color--primary
+          .mdl-layout--large-screen-only.mdl-layout__header-row
+          .mdl-layout--large-screen-only.mdl-layout__header-row
+            if user
+              h3 hello #{user.username}!
+            else
+              h3 Hello!
+          .mdl-layout__tab-bar.mdl-js-ripple-effect.mdl-color--primary-dark
+            include ../partials/topNavigation
+            //- button#add.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored.mdl-shadow--4dp.mdl-color--accent
+            //-   i.material-icons(role='presentation') add
+            //-   span.visuallyhidden Add
+        main.mdl-layout__content
+          #overview.mdl-layout__tab-panel.is-active
+          block content
+          block features
+          include ./footer
+    //- a#view-source.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-color--accent.mdl-color-text--accent-contrast(href='https://github.com/google/material-design-lite/blob/master/templates/text-only/', target='_blank') View Source
+

@@ -1,0 +1,18 @@
+extends ./layout/page
+
+block css
+    link(rel='stylesheet' href="/css/error.css")
+
+block title
+    title Error 404 not found page!
+block headerTitle
+  span.mdl-layout-title Такой страница не существует!!
+block content
+    section.section--center.mdl-grid.mdl-grid--no-spacing.mdl-shadow--2dp
+      .flag.note.note--warning
+        .flag__image.note__icon
+          i.fa.fa-exclamation
+        .flag__body.note__text
+          | Your thing was not so successful! #{page}!!!
+        a.note__close(href='#')
+          i.fa.fa-times

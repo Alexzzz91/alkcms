@@ -1,0 +1,24 @@
+extends ./layout/page
+
+block title
+    title Article #{user.username}
+
+block content
+      section.section--center.mdl-grid.mdl-grid--no-spacing.mdl-shadow--2dp.relative
+        .mdl-card.mdl-cell.mdl-cell--12-col
+          .mdl-card__supporting-text.mdl-grid.mdl-grid--no-spacing
+            h4.mdl-cell.mdl-cell--12-col Details
+            .section__text.mdl-cell.alk-chat-container
+                #messages
+          .mdl-card__actions
+            form#form(action="")
+                input#m(disabled, autocomplete="off",  autofocus="true", placeholder="Введите ваше сообщение...") 
+                button Отправить
+        button#btn2.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon
+          i.material-icons more_vert
+        ul.mdl-menu.mdl-js-menu.mdl-menu--bottom-right(for='btn2')
+          li.mdl-menu__item Lorem
+          li.mdl-menu__item(disabled='') Ipsum
+          li.mdl-menu__item Dolor
+        script(src="/vendor/bower_components/socket.io-client/socket.io.js")
+        script(src="/js/chat.js")

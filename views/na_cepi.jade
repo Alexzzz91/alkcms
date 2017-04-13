@@ -1,0 +1,54 @@
+extends ./layout/page
+
+block css
+    link(rel='stylesheet' href="/bower_components/medium-editor/dist/css/medium-editor.min.css")
+    link(rel='stylesheet' href="/bower_components/medium-editor/dist/css/themes/default.css")
+    link(rel='stylesheet' href="/bower_components/trumbowyg/dist/ui/trumbowyg.min.css")
+block title
+    title #{user.username}
+block headerTitle
+  span.mdl-layout-title Просмотр и редактирование сайта "на цепи"
+block content
+  script(src="/bower_components/medium-editor/dist/js/medium-editor.min.js")
+  script(src="/bower_components/trumbowyg/dist/trumbowyg.min.js")
+  section.demo-charts.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
+    .mdl-card.mdl-cell.mdl-cell--12-col
+      .mdl-card__supporting-text
+        form(name="na_cepi_info" id="#{data ? data.id : ''}")
+          .alk-image-avatar
+            label(for='sample1') Изображение
+            .file-upload
+              //- button.file-upload-btn(type='button', onclick="$('.file-upload-input').trigger( 'click' )") Add Image
+              .image-upload-wrap(style="#{data.image ? 'display:none;' : ''}")
+                input#image.file-upload-input(type='file', name='image', onchange='readURL(this);', accept='image/*')
+                .drag-text
+                  h3 Перенеси сюда изображение или просто нажми сюда...
+              .file-upload-content(style="#{data.image ? 'display:block;' : ''}")
+                img.file-upload-image#image_src(src="#{data.image ? data.image : ''}", alt='your image')
+                .image-title-wrap
+                  button.remove-image(type='button', onclick='removeUpload()')
+                    | Удалить 
+                    span.image-title Uploaded Image
+          .mdl-textfield.long.mdl-js-textfield
+            input#address.mdl-textfield__input(type='text', name='address', value='#{data.address ? data.address : ""}')
+            label.mdl-textfield__label(for='name') Адресс
+          .mdl-textfield.long.mdl-js-textfield
+            input#type.mdl-textfield__input(type='text', name='number', value='#{data.number ? data.number : ""}')
+            label.mdl-textfield__label(for='type') Номер телефона
+            span.mdl-textfield__error некорректный номер
+          .mdl-textfield.long.mdl-js-textfield
+            textarea#description.mdl-textfield__input(name="text") #{data.text ? data.text : ""}
+            label.mdl-textfield__label.description(for='description') Описание квеста
+          .mdl-textfield.long.mdl-js-textfield
+            input#sample4.mdl-textfield__input(type='text', name="instagramm", value='#{data.instagramm ? data.instagramm : ""}')
+            label.mdl-textfield__label(for='sample4') ссылка на инстаграмм
+          .mdl-textfield.long.mdl-js-textfield
+            input#sample5.mdl-textfield__input(type='text',name="vk", value='#{data.vk ? data.vk : ""}')
+            label.mdl-textfield__label(for='sample5') ссылка на ВК
+        if data
+          .mdl-textfield.long.mdl-js-textfield
+            input#sample6.mdl-textfield__input(disabled='true', type='text', value='#{data.createdAt}')
+            label.mdl-textfield__label(for='sample6') Дата обновления
+      .mdl-card__actions.right-actions
+        button.mdl-button.mdl-button.mdl-js-button.mdl-button--primary#save Сохранить
+  script(src="/js/na_cepiinfo.js")

@@ -1,0 +1,8891 @@
+* {
+  font-size: 0;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  outline: none !important;
+}
+
+html {
+  background: $bg-body;
+}
+
+body {
+  background: $bg-body;
+  font: {
+    family: $family_6;
+  }
+}
+
+button, .btn {
+  outline: none;
+  box-shadow: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+* {
+  outline: none;
+}
+
+td, th {
+  font: {
+    size: $size_lg;
+  }
+}
+
+th {
+  font-weight: bold;
+}
+
+span {
+  font-size: $size;
+}
+
+#modalChangeFilter {
+
+  md-dialog-actions {
+    padding: 0;
+    display: block;
+  }
+
+}
+
+.md-autocomplete-suggestions {
+  * {
+    font-size: $size;
+  }
+}
+
+.md-scroll-mask {
+  opacity: 0 !important;
+}
+
+md-backdrop.md-opaque.md-default-theme, md-backdrop.md-opaque {
+  background-color: $color_2;
+  opacity: .8;
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+  background: $color_1;
+
+}
+
+.modal-delete {
+  md-toolbar {
+    background: saturate($red_4, 0%);
+  }
+}
+
+.md-dialog-content {
+  font-size: $size;
+}
+
+.salestools__header {
+  height: 48px;
+  background: $color_3;
+  @include border-bottom(1px, $header-border);
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  &.size {
+    margin-right: 202px;
+  }
+}
+
+aside-navigation {
+  position: fixed;
+  z-index: 21;
+}
+
+.salestools__header_toggle_button {
+  background: $color-2;
+  text-align: center;
+  display: inline-block;
+  padding: 13.5px 13px 14px;
+  position: fixed;
+  top: 0;
+  z-index: 22;
+}
+
+.salestools__search_point_menu {
+  font: {
+    size: $size;
+  }
+  width: 100%;
+  background: url('../img/search-icon.png') no-repeat 93% darken($bg-side-menu, 6%);
+  color: white;
+  border: 0;
+  padding: 5px 12px;
+}
+
+.padding-input {
+  padding: 8px 15px 10px;
+  height: 47px !important;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.salestools__header_logotype {
+  display: inline-block;
+  max-width: 190px;
+  margin: 0 18px;
+  padding: 10px 50px;
+  img {
+  }
+}
+
+.salestools__header_user_block {
+  background: $color-2;
+  color: $white;
+  min-width: 278px;
+  height: 48px;
+}
+
+.salestools__content,
+.salestools__main-menu_submenu_open,
+.salestools__header,
+.salestools__content_settings_table {
+  transition: all 0.25s linear;
+}
+
+input {
+  font: {
+    weight: 300;
+  }
+  outline: none;
+  &.blue-input {
+    background: url('../img/search-icon.png') no-repeat 93% $color_2;
+    color: $white;
+    border: 0;
+    padding: 9px 20px;
+    padding-right: 35px;
+    @include text;
+  }
+
+  &.blue-input:-moz-placeholder {
+    color: $placeholder_blue;
+  }
+  &.blue-input::-moz-placeholder {
+    color: $placeholder_blue;
+  }
+  &.blue-input::-webkit-input-placeholder {
+    color: $placeholder_blue;
+  }
+}
+
+#headerSearch {
+  margin-top: 4.5px;
+}
+
+.salestools__header_form, .salestools__header_display_informer {
+  display: inline-block;
+}
+
+.salestools__header_user_block_link {
+  display: inline-block;
+  margin: 3px 0 0 9px;
+}
+
+.salestools__header_user_block_link_loop {
+  display: inline-block;
+  padding: 2px;
+  @include border(2px, $color-1);
+  border-radius: 90px;
+  margin-right: 9px;
+
+  img {
+    border-radius: 100%;
+  }
+}
+
+.salestools__header_user_block_link_text {
+  @include text;
+  padding-top: 14px;
+  margin-right: 9px;
+}
+
+.white {
+  color: $white !important;
+
+  &:hover, &:active, &:focus {
+    color: $white;
+  }
+}
+
+.salestools__header_user_block_toggle {
+  background: $color-1;
+  margin-top: 16.5px;
+  height: 10px;
+  width: 10px;
+}
+
+.salestools__header_widget {
+  display: inline-block;
+  @include border-left(1px, $widget-border);
+  background: $color_1;
+  height: 47px;
+}
+
+.salestools__header_brend {
+  background: $color_1;
+  height: 47px;
+  overflow: hidden;
+}
+
+.bell {
+  content: url('../img/bell.png');
+}
+
+#headerSearchForm {
+  padding-right: 20px;
+  background: $color_1;
+  height: 47px;
+  position: relative;
+}
+.salestools__search-result_sort_list{
+  position: absolute;
+  width: 430px;
+  left: -175px;
+  height: 325px;
+  overflow: auto;
+  top: 50px;
+  background: $white;
+  box-shadow: 0px 15px 7px 5px rgba(0,0,0,0.2);
+  li{
+    height: 54px;
+    a{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      i{
+        flex: 1 1 5%;
+      }
+      .salestools__search-result_sort_list_item_name{
+        display: flex;
+        flex: 10 1 10%;
+        flex-direction: column;
+        align-self: baseline;
+        color: $small-icon-color;
+        &-span{
+          color: $tab-color;
+          @include lgText(700);
+          margin-bottom: 10px;
+        }
+      }
+      span{
+        font-size: $size_sm; 
+      }
+      .salestools__search-result_sort_list_type{
+        opacity: 0.5;
+        img{
+          width: 25px;
+        }
+      }
+    }
+    &:not(:first-child){
+      border-top: 1px solid $grey-light;
+    }
+    &:first-child{
+      border-top: 1px solid transparent;
+    }
+  }
+}
+
+.widget {
+  content: url('../img/widget.png');
+}
+
+.salestools__header_widget_link {
+  padding: 0 14px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.salestools__header_display_informer_block {
+  position: relative;
+  padding: 14px 25px;
+
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 4px;
+    background-color: darken($color_3, 13%);
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &.credit {
+    @include border-right(1px, $widget-border);
+  }
+
+  .indicator {
+    position: absolute;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+
+    &.green {
+      background: $green;
+    }
+
+    &.yellow {
+      background: $yellow;
+    }
+
+    &.red {
+      background: $red_2;
+    }
+  }
+}
+
+.salestools__header_display_informer {
+  @include border-left(1px, $widget-border);
+  @include border-right(1px, $widget-border);
+}
+
+.salestools__header_display_informer_text {
+  display: inline-block;
+  float: left;
+  margin-right: 5px;
+  padding-top: 3px;
+  color: $white;
+
+  @include textReg;
+}
+
+.icon-credit {
+  content: url('../img/dollars.png');
+}
+
+.icon-download {
+  content: url('../img/cloud.png');
+}
+
+.salestools__header_display_informer_icon {
+  display: inline-block;
+  float: left;
+  margin-right: 5px;
+}
+
+.salestools__main-menu {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  font: {
+    //family: $family_3;
+  }
+
+}
+
+.salestools__main-menu_navigate_block {
+  width: 49px;
+  background: $bg-side-menu;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  padding-top: 48px;
+}
+
+.salestools__main-menu_link {
+  border-bottom: 1px solid $sidebar;
+  display: block;
+  &:hover {
+    .salestools__main-menu_icon {
+      background-position-x: -74px;
+    }
+    i.sequences {
+      background: url('../img/icon-sequences--hover.png') 12px center no-repeat;
+    }
+  }
+  &.active {
+    background: $dark-blue;
+    .salestools__main-menu_icon {
+      background-position-x: -74px;
+    }
+    i.sequences {
+      background: url('../img/icon-sequences--hover.png') 12px center no-repeat;
+    }
+    i.seek {
+      background-position: -73px -305px;
+    }
+  }
+}
+
+.salestools__main-menu_icon {
+  display: block;
+  width: 50px;
+  height: 40px;
+  background: url('../img/icon-nav.png') no-repeat top left;
+  //margin-bottom: 5px;
+  &.prospects {
+    background-position: 8px 5px;
+  }
+  &.companies {
+    background-position: 8px -37px;
+  }
+  &.acquire {
+    background-position: 8px -85px;
+  }
+  &.sequences {
+    background: url('../img/icon-sequences.png') 12px center no-repeat;
+  }
+  &.dashboard {
+    background-position: 8px -167px;
+  }
+  &.history {
+    background-position: 8px -211px;
+  }
+  &.emailBook {
+    background-position: 8px -258px;
+  }
+  &.taskmanager {
+    background-position: 8px -213px;
+  }
+  &.inbox {
+    background-position: 8px -127px;
+  }
+  &.seek {
+    background: {
+      image: url('../img/icon-nav.png');
+      repeat: no-repeat;
+      position: 7px -305px;
+    }
+  }
+}
+
+.salestools__main-menu_submenu_open {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  //background: $dark-blue;
+  background: $dark-blue;
+  width: 250px;
+  z-index: -2;
+  //padding-top: 48px;
+  padding-left: 49px;
+  left: -205px;
+}
+
+.salestools__search__menu_list {
+  input {
+    font-size: $size;
+  }
+}
+
+.salestools__main-menu_submenu_open_link {
+  @include text;
+  cursor: pointer;
+  display: inline-block;
+  padding-top: 2px;
+  &:active, &:focus, &:hover {
+    color: $white;
+  }
+}
+
+.salestools__main-menu_submenu_open_list {
+  height: 41px;
+  padding-top: 10px;
+  padding-left: 15px;
+  display: block;
+  //border-bottom: 1px solid $border-menu;
+  .fa {
+    color: $menu-arrow;
+    font-size: $size;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+  .trigger-open {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+  }
+  &.active {
+    background: $dark-blue;
+    .fa {
+      color: $white;
+    }
+  }
+}
+
+body.salestools__main_menu_opened {
+  .salestools__content {
+    padding-left: 270px;
+  }
+}
+
+.link_conteiner {
+  &.active {
+    background: $dark-blue;
+    .fa {
+      color: $white;
+    }
+    .salestools__submenu_second_next-menu {
+
+      .fa {
+        color: $sidebar-icon;
+      }
+    }
+    .salestools__main-menu_icon {
+      background-position-x: -74px;
+    }
+  }
+
+}
+
+.salestools__submenu_second_next-menu {
+  color: $white;
+}
+
+.salestools__submenu_second-list {
+  position: absolute;
+  height: 100%;
+  left: -205px;
+  top: 0;
+  width: 100%;
+  background: $dark-blue;
+  padding-top: 6px;
+  padding-left: 50px;
+}
+
+.salestools__submenu_second-list_title {
+  padding: 12px 0 12px;
+  padding-left: 12px;
+  //background: $bg-alpha-black;
+  cursor: pointer;
+}
+
+.salestools__submenu_second-list_title_link {
+  .fa {
+    //margin-top: 2px;
+    margin-top: 0;
+  }
+}
+
+.salestools__submenu_second-list_title_text {
+  text-transform: uppercase;
+  font: {
+    size: $size;
+    weight: 600;
+  }
+}
+
+.salestools__submenu_second_next-menu {
+  .fa {
+    color: $sidebar-icon;
+    width: 15px;
+    margin-right: 15px;
+    position: relative;
+    top: -2px;
+  }
+  .svg-block {
+    position: relative;
+    top: -2px;
+    width: 15px;
+    margin-right: 15px;
+    &.lage-svg {
+      left: -4px;
+      top: -5px;
+    }
+    &.exlage-svg {
+      left: -2px;
+      top: -8px;
+    }
+    &.q-svg {
+      left: -2px;
+      top: -4px;
+    }
+    path, circle {
+      fill: $sidebar-icon;
+    }
+  }
+}
+
+.salestools__submenu_second_next-menu_link {
+  display: block;
+  padding: 10px 20px;
+  padding-left: 38px;
+  //border-top: 1px solid $bg-alpha-black;
+  font-size: $size;
+  color: $white;
+  &:hover {
+    color: $color_1;
+  }
+  .fa {
+    color: $sidebar-icon;
+  }
+}
+
+.salestools__content_filter {
+  background: $grey-light;
+  @include border(1px, $grey-border);
+  padding: 2px 15px;
+  height: 44px;
+}
+
+.salestools__content {
+  padding: 70px 20px 30px 70px;
+  //margin-bottom: 30px;
+}
+
+.blur {
+  @include blur(5);
+}
+
+.md-scroll-mask {
+  background: $color_1;
+  opacity: .7;
+  position: fixed;
+}
+
+.salestools__content_filter_form {
+  .salestools__label {
+    line-height: 1.3;
+    float: left;
+    padding-top: 6px;
+  }
+}
+
+.salestools__label {
+  color: $filterColor;
+  font: {
+    size: $size;
+  }
+}
+
+.salestools__content_select_block {
+  padding: 0 15px 0 0;
+  margin-right: 15px;
+  @include border-right(1px, $grey-border);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.salestools__content_filter_select-edit {
+  margin-right: 15px;
+  padding: 0 15px 0 0;
+  @include border-right(1px, $grey-border);
+}
+
+.salestools__content_filter_button {
+  background: lighten($color_title_1, 10%);
+  padding: 4px 10px 6px;
+  border-radius: 4px;
+  @include textReg;
+
+  &.mini {
+    padding: 2px 10px;
+  }
+
+  &.none-color {
+    background: none;
+    &:hover {
+      background: none;
+    }
+  }
+
+  &:hover, &:active, &:focus {
+    color: $white;
+    outline: none;
+
+  }
+
+  &:hover {
+    background: $color_1;
+  }
+
+  &:active {
+    $color_3: #2177B2;
+  }
+
+  .fa {
+    margin-left: 5px;
+    font-size: $size-sm;
+  }
+}
+
+.salestools__content_settings_table {
+  //background: $grey-medium;
+  background: $color_title_1;
+  padding: 6px 0px;
+  margin-bottom: 5px;
+  transition: all 0.25s linear;
+
+  @include border(1px, darken($color_title_1, 2%));
+  //@include border(1px, $grey-icon-light);
+
+  &.salestools__sticky {
+    position: fixed;
+    z-index: 9;
+    width: calc(100% - 49px);
+    top: 47px;
+    left: 49px;
+
+    .salestools__main_menu_opened & {
+      left: 230px;
+      width: calc(100% - 230px);
+      padding-left: 20px;
+    }
+  }
+}
+
+.salestools__chekbox {
+  @include border(1px, $mostGrey-border);
+}
+
+.salestools__content_settings_table_move-to {
+  max-width: 430px;
+  margin: 0 -5px;
+}
+
+.salestools__content_filter_constructor_link {
+  width: calc(100% - 340px);
+
+  &--narrow {
+    max-width: 270px;
+  }
+
+  input[type=text] {
+    height: 30px;
+    padding-right: 38px;
+    border: 0;
+    background: $white url('../img/icon-search.png') right 10px top 6px no-repeat;
+
+    &.search-in-progress {
+      background-image: url('../img/search-loader.gif');
+      background-size: 18px 18px;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color_1;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    &:-moz-placeholder {
+      color: $color_1;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    &::-moz-placeholder {
+      color: $color_1;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color_1;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    &:focus {
+      &::-webkit-input-placeholder {
+        color: transparent;
+      }
+
+      &:-moz-placeholder {
+        color: transparent;
+      }
+
+      &::-moz-placeholder {
+        color: transparent;
+      }
+
+      &:-ms-input-placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
+
+.salestools__content_filter_export_buttons {
+  margin: 0 10px;
+}
+
+.salestools__content_check-all {
+  padding-right: 10px;
+  margin-top: 5px;
+  padding-top: 2px !important;
+  border-right: 1px solid $color_2;
+  padding-bottom: 2px;
+  .salestools__checkbox_view {
+    i {
+      display: inherit;
+    }
+  }
+}
+
+.salestools__content_selected-count {
+  font-size: $size_sm;
+  width: 100%;
+  padding: 0px;
+  line-height: 12px;
+  color: lighten($textColor, 10%);
+  margin: 0 -15px 10px;
+}
+
+.salestools__content_header {
+  .salestools__label {
+    margin-right: 9px;
+  }
+}
+
+.salestools__content_view_model {
+  margin: 0 -3px;
+}
+
+.salestools__content_view_block {
+  width: 30px;
+  height: 29px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2px;
+  float: left;
+  margin: 0 3px;
+  @include border(1px, $white);
+  &.check {
+    background: darken($color_1, 20%);
+    @include border(1px, darken($color_1, 30%));
+  }
+
+  .view-table {
+    //content: url('../img/view-table.png');
+    background-image: url('../img/view-table.png');
+    background-size: cover;
+  }
+
+  .view-card {
+    //content: url('../img/view-card.png');
+    background-image: url('../img/view-card.png');
+    background-size: cover;
+  }
+}
+
+.salestools__select_move-to-list, #list-select {
+  width: 129px;
+  height: 30px;
+}
+
+.salestools__content_paginator {
+  padding-left: 20px;
+  margin: 0 -5px;
+  align-items: center;
+  display: flex;
+}
+
+.salestools__filter_popover_bottom_right_sort_lits{
+  .salestools__filter_sort_list {
+    min-width: 250px;
+    li{
+      a{
+        padding: 10px;
+        box-sizing: content-box;
+      }
+    }
+  }
+}
+
+.salestools__filter_sort_list {
+  min-width: 200px;
+
+  li {
+    margin: 0px 0;
+    //border-bottom: 1px solid $bg-alpha-black;
+
+    a {
+      display: block;
+      padding: 8px 10px 10px;
+      text-align: left;
+      font: {
+        size: $size;
+      }
+    }
+
+    &:hover {
+      background: $bg-alpha-black;
+      //@include blur(2);
+    }
+  }
+  li:last-child {
+  }
+}
+
+.salestools__content_paginator_arrows, .salestools__content_paginator_trigger {
+  margin: 0 5px;
+}
+
+.salestools__content_paginator_trigger {
+  .salestools__content_filter_button_row__submit {
+    padding: 5px 10px;
+
+    &.border-radius {
+      border-radius: 4px;
+    }
+  }
+}
+
+.salestools__dasboard_settings {
+  margin-bottom: 20px;
+}
+
+.salestools__content_filter_button_row__submit {
+  background: $color_1;
+  color: white;
+  border-radius: 4px;
+  height: 33px;
+  &:hover {
+    background: $color_2;
+  }
+
+  &.border-radius {
+    border-radius: 4px;
+  }
+}
+
+.salestools__content_paginator_arrow_el {
+  font-size: $arrow-size;
+  line-height: 0;
+  font-weight: bold;
+  color: $white;
+  padding: 0 5px;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  &:hover, &:focus, &:active {
+    color: $textColor;
+  }
+  &.salestools__content_paginator_arrows_prev {
+  }
+  &.disabled {
+    cursor: default;
+    .salestools__content_paginator_icon {
+      color: white;
+      opacity: .4;
+    }
+  }
+}
+
+.salestools__content_paginator_icon {
+  position: relative;
+  top: -2px;
+  color: white;
+}
+
+.salestools__content_paginator_trigger_text {
+  @include textReg;
+  color: white;
+}
+
+.salestools__content_paginator_trigger {
+  padding-top: 0px;
+}
+
+.salestools__container_prospects {
+
+}
+
+.salestools__prospect {
+  background: $white;
+  &.prospect_view-table {
+    clear: both;
+    margin-bottom: 4px;
+    height: 95px;
+    position: relative;
+  }
+  &.salestools__prospect_not-found {
+    font-size: $size_lg;
+    padding: 20px 0;
+  }
+}
+
+.salestools__all__inf__prospect_line {
+  width: calc(100% - 205px);
+  padding: 10px 0 0 0px;
+  margin: 0 -7.5px;
+  & > div {
+    width: 33.333333%;
+    width: 37%;
+    padding: 0 7.5px;
+    text-align: left;
+    @include flex(column, center, center);
+    align-items: stretch;
+    height: 72px;
+  }
+
+  .salestools__name_box {
+    width: 26%;
+  }
+}
+
+.salestools__prospect_block_content {
+  //@include border-bottom(1px, $borer-dark);
+  height: 95px;
+  position: relative;
+}
+
+.salestools__prospect_date, .salestools__block_date {
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 100%;
+  padding: 5px 0;
+  background: $grey-medium;
+  &:hover {
+    .salestools__prospect_indicate_tooltip {
+      display: block;
+      animation: opacity-tooltip 1s;
+      animation-fill-mode: both;
+      text-align: center;
+      min-width: 90px;
+      max-width: 105px;
+      padding: 4px;
+      span {
+        padding: 4px;
+        font-size: $size_sm;
+      }
+    }
+  }
+  .date_prospect_view-table {
+  }
+
+  &--inactive {
+    width: 42px;
+  }
+
+  &--active {
+    width: 42px;
+    border-left: 4px solid #6f50a4;
+  }
+}
+
+.salestools__prospect_buttons_block {
+  background: $grey-light;
+  width: 90px;
+  height: 100%;
+
+  .salestools__prospect_del_button {
+    margin-top: 6px;
+  }
+
+  .mail-svg {
+    width: 28px;
+    height: 25px;
+    margin: 0 auto;
+    right: -4px;
+    top: 0px;
+    position: relative;
+  }
+
+  &--no-status {
+    background-color: $white;
+    width: 45px;
+  }
+
+  .svg-constructor {
+    width: 36px;
+    height: 40px;
+    .circle-div {
+      width: 14px;
+      height: 14px;
+      bottom: 4px;
+      right: 2px;
+    }
+    .reload-svg {
+      width: 12px;
+      height: 12px;
+      bottom: 5px;
+      right: 3px;
+    }
+  }
+}
+
+.salestools__prospect {
+  &.grey {
+    .mail-svg {
+      .fill-svg {
+        fill: $icon-contacts-color;
+      }
+    }
+
+    .warning-svg, .triangle-up, .yellow, .blue, .reload-svg {
+      display: none;
+    }
+  }
+  &.yellow {
+    .mail-svg {
+      .fill-svg {
+        fill: $yellow;
+      }
+    }
+
+    .reload-svg {
+      path {
+        fill: $yellow;
+      }
+    }
+
+    .circle-div {
+
+    }
+
+    .search-svg, .blue, .grey {
+      display: none;
+    }
+  }
+  &.blue {
+    .mail-svg {
+      .fill-svg {
+        fill: $green;
+      }
+    }
+
+    .search-svg, .warning-svg, .triangle-up, .yellow, .grey {
+      display: none;
+    }
+  }
+
+  &.salestools__proaspect_details {
+
+    .salestools__prospect__contacts_text {
+      margin-bottom: 0;
+    }
+    .salestools__prospect__contacts_text,
+    .salestools__prospect__contacts_email_link,
+    .salestools__prospect__contacts_link {
+      font: {
+        size: $size_sm;
+      }
+    }
+    .icon-contacts.mail-svg {
+      top: 0;
+    }
+  }
+
+}
+
+.trash-white {
+  background-image: url('../img/trash-white.png');
+  background-size: cover;
+}
+
+.salestools__prospect__settings_button {
+  background: $color_1;
+  width: 45px;
+  height: 100%;
+  padding: 0px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+
+  .dropdown-menu {
+    height: 94px;
+  }
+
+  > a.salestools__circle-button-angular {
+    padding: 0;
+  }
+}
+
+.salestools__circle-button {
+  .circle-element {
+    border-radius: 60px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &.medium-size {
+    .circle-element {
+      width: 4px;
+      height: 5px;
+      margin: 0 2px;
+    }
+  }
+  &.small-size {
+    padding: 0;
+
+    .circle-element {
+      width: 5px;
+      height: 5px;
+      margin: 0 1px;
+      float: left;
+      display: block;
+    }
+  }
+  &.white {
+    .circle-element {
+      background: $white;
+    }
+  }
+  &.blue {
+    .circle-element {
+      background: #0f4f7b;
+    }
+  }
+
+  &.grey {
+    position: relative;
+    top: -6px;
+    margin-left: 15px;
+    .circle-element {
+      background: $grey-text;
+      width: 4px;
+      height: 4px;
+      margin: 0 1px;
+      font-size: 0;
+      float: left;
+    }
+  }
+}
+
+.salestools__prospect_del_button {
+  &.red {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    path {
+      fill: $small-icon-color;
+    }
+  }
+}
+
+.no-email {
+  //content: url("../img/no-email-icon.png");
+  background-image: url("../img/no-email-icon.png");
+  background-size: cover;
+  padding-top: 18px;
+}
+
+.salestools__prospect__search_email_text {
+  font: {
+    size: $size_exsm;
+    weight: bold;
+  }
+  &.grey {
+    color: $grey-text;
+  }
+  &.yellow {
+    color: $yellow;
+  }
+  &.blue {
+    color: $green;
+  }
+}
+
+.salestools__prospect__contacts_email_link {
+  &.yellow {
+    color: $yellow;
+  }
+}
+
+.salestools__prospect__search_email {
+  width: 100%;
+}
+
+.salestools__prospect__img_persone {
+  width: 70px;
+  height: 72px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 10px 10px 0 10px;
+  position: relative;
+}
+
+.salestools__prospect__img_persone_img {
+  border: 0;
+  height: 100%;
+
+}
+
+.salestools__prospect__count-people {
+  em {
+    color: $grey-medium;
+  }
+}
+
+.salestools__prospect__name_link {
+  color: $color_1 !important;
+  height: 20px;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  font: {
+    size: $size_exlg;
+    family: $family;
+    weight: 500;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color_1 !important;
+  }
+
+  > span {
+    //@include overflow-w(77%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 5px;
+    font: {
+      size: $size_lg;
+    }
+  }
+}
+
+.salestools__prospect_date {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  &--white {
+    @extend .salestools__prospect_date;
+
+    .salestools__prospect_date_text {
+      color: $white;
+    }
+  }
+
+  > div {
+    padding-top: 0;
+  }
+
+  .salestools__checkbox-container {
+    margin-bottom: 6px;
+  }
+}
+
+.salestools__prospect_date_text_angular, .salestools__date_text_angular {
+  //line-height: 1.35;
+  width: 100%;
+}
+
+input.input-show-dropmenu {
+  display: none;
+  &:checked + .salestools__circle-button {
+    background: #0f4f7b;
+  }
+  &:checked + .salestools__circle-button + .dropdown-menu {
+    display: block;
+  }
+}
+
+.salestools__circle-button-angular {
+  width: 100%;
+  padding: 10px 0 7px;
+  background: none;
+  border: 0;
+  outline: none;
+  position: relative;
+  * {
+    outline: none;
+  }
+}
+
+.salestools__prospect__information {
+  p {
+    clear: both;
+
+  }
+  small {
+    span {
+      @include overflow-w(93%);
+      display: inline-block;
+      padding-top: 4px;
+      font-size: $size_sm;
+    }
+  }
+  &.company {
+    margin-bottom: 15px;
+  }
+}
+
+small {
+  @include smallText;
+  color: $color-small;
+}
+
+.salestools__prospect__company {
+  color: $filterColor;
+  margin-bottom: 4px;
+  font: {
+    size: $size;
+    weight: bold;
+  }
+  height: 19px;
+  //@include overflow;
+  span {
+    @include overflow-max(90%);
+    float: left;
+    font: {
+      size: $size;
+    }
+  }
+}
+
+.salestools__prospect_companies_count {
+  font: {
+    size: $size_sm;
+    weight: 300;
+  }
+  color: $color_1 !important;
+  margin-left: 8px;
+  opacity: .6;
+  //padding-left: 8px;
+  //@include border-left(1px, $color_1);
+  @include filter(grayscale, 100%);
+
+  &:hover {
+    opacity: 1;
+    @include filter(grayscale, 0);
+  }
+}
+
+.icon-companies-blue {
+  background: url("../img/company-blue.png") no-repeat;
+  display: inline-block;
+  width: 8px;
+  height: 9px;
+}
+
+.salestools__prospect__country {
+  span {
+    @include overflow-w(93%);
+  }
+  ng-transclude {
+    width: 100%;
+    display: block;
+    span {
+      position: relative;
+      top: 2px;
+      cursor: pointer;
+    }
+  }
+}
+
+.company-icon {
+  background: url("../img/sprite-icon-information.png") no-repeat 0 2px;
+}
+
+.people-count-icon {
+  background: url("../img/sprite-icon-information.png") no-repeat 0 -33px;
+}
+
+.small-icon {
+  width: 12px;
+  height: 14px;
+  margin-right: 4px;
+  float: left;
+  text-align: center;
+  color: $small-icon-color;
+  position: relative;
+  top: 2px;
+  &.fa {
+    top: 4px;
+  }
+  &.svg {
+    margin-top: 1px;
+    float: left;
+  }
+
+  &.people {
+    g {
+      fill: $small-icon-color;
+    }
+  }
+}
+
+.people {
+  &.white {
+    g {
+      fill: $white;
+    }
+  }
+}
+
+.salestools__prospect__contacts {
+  padding-top: 4px;
+
+  > p,
+  > p > * {
+    font-size: $size-sm;
+  }
+
+  &.grey {
+    .salestools__prospect__contacts_email_link {
+      color: $icon-contacts-color;
+    }
+    .mail-svg {
+      .fill-svg {
+        fill: $icon-contacts-color;
+      }
+    }
+  }
+  &.blue {
+    .salestools__prospect__contacts_email_link {
+      color: $color_1;
+    }
+    .mail-svg {
+      .fill-svg {
+        fill: $color_1;
+      }
+    }
+  }
+  &.yellow {
+    .salestools__prospect__contacts_email_link {
+      color: $yellow;
+    }
+    .mail-svg {
+      .fill-svg {
+        fill: $yellow;
+      }
+    }
+  }
+
+  .salestools__social_icons {
+    //height: 18px;
+    //margin-bottom: 8px;
+  }
+}
+
+.salestools__prospect__contacts_text {
+  color: $icon-contacts-color;
+  //@include overflow();
+}
+
+.email-grey {
+  //content: url("../img/grey-email-icon.png");
+  background-image: url("../img/grey-email-icon.png");
+  background-size: cover;
+}
+
+.earth {
+
+}
+
+.phone {
+
+}
+
+.icon-contacts {
+  width: 16px;
+  text-align: center;
+  margin-right: 4px;
+  &.mail-svg {
+    position: relative;
+    top: -1px;
+    &.yellow {
+      g {
+        fill: $yellow;
+      }
+    }
+  }
+  &.fa {
+    color: $small-icon-color;
+  }
+
+}
+
+.salestools__prospect__contacts_text {
+  margin-bottom: 2px;
+  @include textReg;
+  font-size: $size - 1;
+  &.grey {
+    .icon-contacts {
+      color: $icon-contacts-color;
+    }
+    .mail-svg {
+      .fill-svg {
+        fill: $icon-contacts-color;
+      }
+    }
+  }
+  &.yellow {
+    .icon-contacts {
+      color: $icon-contacts-color;
+    }
+    .mail-svg {
+      .fill-svg {
+        fill: $yellow;
+      }
+    }
+  }
+}
+
+.salestools__prospect__contacts_link {
+  color: $color_1;
+  @include overflow-w(96%);
+}
+
+.mail-svg {
+  &.grey {
+    .fill-svg {
+      fill: $icon-contacts-color;
+    }
+  }
+}
+
+.svg-constructor {
+  position: relative;
+  height: 55px;
+  padding-top: 10px;
+  display: inline-block;
+  width: 55px;
+  .svg {
+    position: absolute;
+    bottom: 4px;
+    right: -2px;
+    z-index: 5;
+    path {
+      fill: $icon-contacts-color;
+    }
+  }
+
+  .warning-svg {
+    bottom: -4px;
+    right: -8px;
+
+    .warning-svg-fill {
+      path {
+        fill: $yellow;
+      }
+    }
+  }
+  .search-svg {
+    position: absolute;
+    bottom: 4px;
+    right: 2px;
+    z-index: 5;
+    width: 12px;
+    height: 12px;
+    path {
+      fill: $icon-contacts-color;
+    }
+  }
+
+  .circle-div {
+    border-radius: 80px;
+    width: 22px;
+    height: 22px;
+    background: $grey-light;
+    position: absolute;
+    bottom: 4px;
+    right: -2px;
+    z-index: 4;
+  }
+
+}
+
+.reload-svg {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  z-index: 5;
+  width: 19px;
+  height: 19px;
+  path {
+    fill: $green;
+  }
+}
+
+.svg-bg {
+  position: absolute;
+  right: -2px;
+  z-index: 4;
+
+  &.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 22px solid $grey-light;
+    top: 30px;
+    right: -9px;
+  }
+}
+
+.modal-backdrop {
+  background: $modal-over-bg;
+}
+
+.md-overlay, .modal-backdrop.in {
+  background: $modal-over-bg;
+  opacity: 1;
+}
+
+.md-content {
+  background: $color_3;
+  box-shadow: 0px 0px 84px -4px rgba(0, 0, 0, .4);
+}
+
+.svg-close {
+  width: 20px;
+  height: 20px;
+  opacity: .7;
+}
+
+//modal
+
+.salestools__modal_close {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  z-index: 1;
+}
+
+.md-modal {
+  width: 1000px;
+  max-width: 100%;
+  &.salestools__prospect_details {
+    height: 100%;
+
+  }
+}
+
+.md-content {
+  background: $white;
+  border-radius: 6px;
+}
+
+.salestools__modal_persone_avatar {
+  width: 123px;
+  height: 123px;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.salestools__modal_persone_avatar__img {
+  height: 100%;
+  border: 0;
+}
+
+.salestools__modal_persone_main {
+  padding: 6px;
+  width: calc(100% - 320px);
+  position: relative;
+  background: $white;
+  @include border-bottom(1px, $border-modal-header);
+  &:after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: $grey-light_2;
+    height: 74px;
+  }
+}
+
+.salestools__modal_persone {
+  background: $color_1;
+}
+
+.salestools__modal_persone_form {
+  width: calc(100% - 123px);
+  padding: 0 0 0 14px;
+  position: relative;
+  z-index: 5;
+}
+
+.salestools__modal_persone_name {
+  padding-top: 5px;
+}
+
+.salestools__modal_persone_name_text {
+  color: $color-prospect-name;
+  margin-bottom: 8px;
+  font: {
+    size: $size_exlg;
+    weight: 600;
+  }
+}
+
+.salestools__modal_persone_form_line {
+  margin-bottom: 5px;
+}
+
+.salestools__modal_persone_profession {
+  color: $textColor;
+  font: {
+    size: $size;
+  }
+}
+
+.salestools__modal_persone_form_contacts_inf {
+
+}
+
+.salestools__modal_persone_second_information {
+  width: 320px;
+  background: $color_1;
+  height: 136px;
+  padding-top: 17px;
+  @include border-bottom(1px, $color_2);
+  position: relative;
+
+  p:last-child {
+    margin-bottom: 17px;
+  }
+}
+
+.salestools__prospect_details_header {
+
+}
+
+.salestools__modal__prospects_note_text {
+  font: {
+    size: $size;
+  }
+  color: $textColor;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.salestools__modal__body_prospect_details {
+  //padding: 6px;
+  .md-padding {
+    padding: 20px;
+  }
+  .ng-isolate-scope {
+    md-content {
+      height: 61.7vh;
+      overflow-y: auto;
+    }
+  }
+}
+
+.salestools__prospect_details {
+  .salestools__modal__body_prospect_details {
+    md-content.md-default-theme, md-content {
+      background: white;
+    }
+    //padding: 6px;
+    height: 100%;
+    .md-content {
+      height: 87.75%;
+    }
+  }
+  .md-content {
+    margin: 0% auto 0%;
+    height: 100%;
+    position: relative;
+    @include shadow(0px, 0px, 84px, -4px, $black-shadow);
+  }
+}
+
+.salestools__modal {
+
+  .md-content {
+    margin: 5% auto 0%;
+    max-width: 740px;
+    position: relative;
+    @include shadow(0px, 0px, 84px, -4px, $black-shadow);
+
+  }
+}
+
+.salestools__blue_button {
+  background: $color_1;
+  color: $white;
+  text-align: center;
+  padding: 2px;
+  border: 0;
+  font: {
+    size: $size_sm;
+    weight: bold;
+  }
+
+  &:hover, &:active, &:focus {
+    color: $white;
+    background: $color_2;
+  }
+
+  &.salestools__persone_details__blue_button {
+    width: 100%;
+    height: 24px;
+    border: 0;
+    padding: 3px 2px 0;
+    text-transform: lowercase;
+    line-height: 1.3;
+    margin-left: -7px;
+    color: $white;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.salestools__modal_persone_form_input {
+  border: 0;
+  height: 24px;
+  @include smallText;
+  color: $textColor;
+  padding-left: 32px;
+  &.email {
+    background: url("../img/grey-email-icon.png") no-repeat 4% $white;
+  }
+
+  &.tel {
+    background: url("../img/grey-tell-icon.png") no-repeat 4% $white;;
+  }
+}
+
+.salestools__modal_persone_form_contacts_inf {
+  padding: 20px 0 0 15px;
+}
+
+.salestools__modal_persone_second_information_text {
+  color: $white;
+  padding-left: 18px;
+  display: block;
+  margin-bottom: 10px;
+  font: {
+    size: $size_sm + 1;
+  }
+  .fa {
+    color: $white;
+  }
+
+  span {
+    //float: left;
+    @include overflow;
+  }
+}
+
+.factory {
+  //content: url('../img/factory.png');
+  background-image: url('../img/factory.png');
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+}
+
+.salestools__modal_persone_second_information_text_span {
+  padding: 5px 0 0 5px;
+
+}
+
+.salestools__modal_persone_second_information_date {
+  background: $color_2;
+  padding: 10px;
+  height: 27px;
+  margin-top: 17px;
+  padding: 7px 20px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.salestools__modal_persone_date_text {
+  color: $color-date;
+  font: {
+    size: $size_sm + 1;
+  }
+}
+
+.salestools__modal__body_prospect_details.salestools__modal__body_prospect_details.salestools__modal__body_prospect_details {
+  position: relative;
+  padding-right: 342px;
+  background-color: #f3f3f3;
+
+  .salestools__activity {
+    right: 10px;
+  }
+
+  .nav-tabs {
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0;
+      &.active a {
+        background: $white;
+      }
+
+      a {
+        padding: 10px 20px;
+        color: $tab-color;
+        margin: 0;
+        border: 0;
+        background: $grey-light;
+        border-radius: 0;
+        &:hover, &:focus, &:active {
+          border: 0;
+        }
+        font: {
+          size: $size;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    background: $white;
+    padding: 20px;
+    height: 70.5%;
+    overflow-y: scroll;
+    @include border-bottom(1px, $tab-border);
+    p, h3, h4, h5, h2 {
+      color: $textColor;
+    }
+    p {
+      @include textReg;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.salestools__modal__prospects_tab-title {
+  margin-bottom: 20px;
+  font: {
+    size: $size_exlg;
+    weight: bold;
+  }
+}
+
+.salestools__modal__prospects_tab-title-sidebar {
+  margin-bottom: 15px;
+  font: {
+    size: $size;
+    weight: 600;
+  }
+}
+
+.salestools__modal__prospects_tab_sidebar_right_block {
+  margin-bottom: 40px;
+}
+
+.salestools__modal__prospects_tab_sidebar_right_block_skill-list {
+  margin: 0 0px 30px;
+}
+
+.salestools__modal__prospects__right_block_skill {
+  margin: 0 0px 4px;
+  @include smallText;
+  padding: 6px 0px;
+}
+
+.salestools__modal__prospects_list-default {
+  margin: 0;
+  padding: 0;
+
+}
+
+.salestools__modal__prospects_list-default_li {
+  @include textReg;
+  color: $textColor;
+  margin: 0 0 10px;
+  margin-left: 15px;
+  padding: 0;
+  position: relative;
+  line-height: 1.3;
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    height: 1px;
+    width: 10px;
+    background: $textColor;
+  }
+
+}
+
+.salestools__modal__prospects_notes {
+  position: relative;
+  margin-bottom: 30px;
+  &:before {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 150px);
+    top: 12px;
+    right: 14px;
+    background: $mostGrey-border;
+  }
+  .fa {
+    padding-top: 6px;
+    color: $mostGrey-border;
+  }
+}
+
+.salestools__modal__prospects_note {
+  @include border-bottom(1px, $mostGrey-border);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.salestools__modal__prospects_notes_text {
+  padding-top: 5px;
+}
+
+.comment-icon {
+  path, circle {
+    fill: $color_1;
+  }
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: -4px;
+}
+
+.salestools__modal__prospects_notes_toggle {
+  display: block;
+  color: $color_1;
+  margin-bottom: 15px;
+  font: {
+    size: $size_sm;
+  }
+}
+
+.salestools__modal__prospects_notes_textarea,
+.salestools__modal__prospects_note textarea.editable-has-buttons {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.salestools__modal__prospects_notes_textarea {
+  min-height: 160px;
+}
+
+.salestools__modal__prospects_note textarea.editable-has-buttons {
+  min-height: 60px;
+}
+
+.salestools__modal__prospects_note .editable-wrap .editable-buttons {
+  display: none;
+}
+
+.salestools__modal__prospects_note .editable-wrap .editable-buttons {
+  display: block;
+}
+
+.salestools__modal__prospects_note .editable-wrap .editable-buttons button {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.870588);
+  text-align: center;
+  border: 1px solid #b8b8b8;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 24px;
+  text-transform: lowercase;
+  &[type=submit] {
+    background: #2283C6;
+    color: #fff;
+    border: 0;
+    padding: 6px 25px;
+    &:hover {
+      background: #0f4f7b;
+    }
+  }
+  &:hover {
+    background: #b8b8b8;
+  }
+}
+
+.salestools__modal__prospects_note .editable-wrap {
+  display: block;
+  width: 100%;
+}
+
+.salestools__modal__prospects_add_note_button {
+  padding: 6px 25px;
+  text-transform: lowercase;
+
+}
+
+.trash-grey, .edit-icon {
+  width: 16px;
+  height: 16px;
+  path {
+    fill: $grey-medium;
+  }
+}
+
+.salestools__modal__prospects_note_date_text {
+  color: $grey-medium;
+  @include smallText;
+  margin-bottom: 20px;
+}
+
+.salestools__modal__prospects_notes_toggle_div {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.salestools__company-details {
+  background: $white;
+  height: 124px;
+  margin-bottom: 20px;
+}
+
+.salestools__company-details_left-block_first-line {
+  padding-top: 13px;
+  margin-bottom: 12px;
+}
+
+.salestools__company__avatar {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.salestools__company__name_text {
+  color: $color-prospect-name;
+  margin-bottom: 8px;
+  font: {
+    size: $size_lg;
+  }
+}
+
+.salestools__company__industrial {
+  @include textReg;
+  color: $filterColor;
+}
+
+.salestools__company__name {
+  padding-top: 10px;
+}
+
+.salestools__company-details_left-block_second-line {
+  background: $small-icon-color;
+  height: 39px;
+  margin: 0 -15px;
+}
+
+.salestools__company-details_left-block {
+  @include border-bottom(2px, $border-company);
+  height: 125px;
+  .salestools__modal_persone_form_contacts_inf {
+    padding: 9px 0 0 15px;
+  }
+}
+
+.salestools__company-details__blue_block {
+  background: $color_1;
+  height: 125px;
+  margin: 0 -15px;
+  @include border-bottom(2px, $color_2);
+  .salestools__company-details__blue_block_information {
+    padding: 26px 0 0;
+  }
+  .salestools__modal_persone_second_information_date {
+    background: #0f4f7b;
+    height: 39px;
+    margin-top: 15px;
+    padding: 10px 20px 0;
+  }
+}
+
+.salestools__company-details__blue_block_footer {
+  height: 39px;
+  background: $blue-border-company;
+}
+
+.salestools__company-details__blue_block_information {
+  padding: 26px 20px 22px;
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.salestools__company-details__blue_block_information_text {
+  color: $white;
+  @include smallText;
+  margin-bottom: 15px;
+}
+
+.salestools__company_form {
+  input {
+    width: 100%;
+  }
+  .salestools__persone_details__blue_button {
+    margin: 0;
+    width: 100px;
+    color: $white;
+  }
+
+  div {
+    margin: 0 4px;
+  }
+
+  margin: 0 -4px;
+}
+
+.salestools__company__name {
+  color: $textColor;
+}
+
+.salestools__company-description {
+  background: $white;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.salestools__company_description_text_block {
+
+}
+
+.absolute {
+  position: absolute;
+}
+
+.company-settings {
+  padding-right: 12px;
+  &.black-button {
+    .circle-element {
+      background: $color_2;
+    }
+  }
+}
+
+.salestools__company_description_title {
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+  margin-bottom: 20px;
+  color: $color-prospect-name;
+}
+
+.salestools__company_description_text {
+  font: {
+    size: $size;
+  }
+  line-height: 1.4;
+}
+
+.salestools__company_map {
+  margin: -20px -20px -20px -15px;
+}
+
+.salestools__content__breadcrambs {
+  margin: 0 -12px 30px;
+  color: $color_1;
+  a {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 12px;
+    @include border-right(1px, $grey-border);
+
+    &.last {
+      @include border-right(0px, $grey-border);
+      color: $grey-icon-dark;
+      font: {
+        weight: bold;
+      }
+    }
+
+  }
+}
+
+.salestools__content__breadcrambs__first_link {
+  text-transform: uppercase;
+  color: $color_1;
+  font: {
+    size: $size_lg;
+    weight: 600;
+  }
+
+}
+
+.salestools__content__breadcrambs__links {
+  color: $grey-medium;
+}
+
+.salestools__dashboard_page {
+  max-width: 960px;
+}
+
+.salestools__dashboard_page_left_side {
+
+}
+
+.salestools__dashboard_page_subscription_block {
+  background: $white;
+}
+
+.salestools__dashboard_page_subscription_header {
+  &.grey-header {
+    background: $filterColor;
+  }
+}
+
+.salestools__dashboard_page_subscription_header_title {
+  padding: 12px 15px;
+  font: {
+    weight: bold;
+    size: $size_lg;
+  }
+}
+
+.salestools__dashboard_page_subscription_content {
+  padding: 15px;
+}
+
+.salestools__dashboard_page_subscription_content__user_avatar {
+  width: 52px;
+  height: 52px;
+  @include border(1px, $mostGrey-border);
+  overflow: hidden;
+  margin: 0px;
+}
+
+.salestools__dashboard_page_subscription_content__user_name {
+  margin: 0 15px;
+  padding-top: 8px;
+  .salestools__dashboard_page_subscription_name_text {
+    margin-bottom: 8px;
+    font: {
+      size: $size;
+      weight: bold;
+    }
+  }
+}
+
+.salestools__dashboard_page_subscription_content__user_avatar_img {
+  width: 100%;
+}
+
+.small {
+  @include smallText;
+}
+
+.salestools__dashboard_page_subscription_content__user {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  @include border-bottom(1px, $border-modal-header);
+}
+
+.svg-flag {
+
+  &.white {
+    path {
+      fill: $white;
+    }
+  }
+}
+
+// modal
+
+.ng-modal-overlay {
+  /* полупорозрачный DIV, который охватывает весь экран */
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.8;
+}
+
+.ng-modal-dialog {
+  /* Отцентрированный даилог с тенью */
+  z-index: 10000;
+  position: absolute;
+  width: 50%;
+
+  /* Центрирование */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+
+.ng-modal-dialog-content {
+  padding: 10px;
+  text-align: left;
+}
+
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+
+.salestools__content_filter_toggle {
+}
+
+.filter-icon {
+  width: 20px;
+  height: 20px;
+  polygon {
+    fill: $border-check-view;
+  }
+}
+
+.salestools__content_filter_header {
+  background: $bg-header-filter;
+  padding: 15px 20px 10px;
+  @include border-bottom(1px, $border_1);
+  height: 78px;
+}
+
+.salestools__content_filter_body_right_side_header {
+  margin: 0 15px 25px;
+  padding-top: 15px;
+  height: 70px;
+  * {
+    font-size: $size;
+    //color: white;
+  }
+
+  md-chip-template {
+    color: white;
+  }
+}
+
+.salestools__content_filter_setting_buttons {
+  margin: 0 -4px;
+}
+
+.salestools__content_filter_clear {
+  color: $color_1;
+  padding-top: 2px;
+}
+
+.salestools__content_filter_open_content {
+  margin-bottom: 10px;
+  position: relative;
+  @include border(1px, $grey-border);
+}
+
+.salestools__content_widget_block {
+  @include flex(row, center, center);
+  width: 100%;
+  height: 78px;
+  padding: 0 20px;
+  .people {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+  }
+
+  .mail-svg {
+    width: 25px;
+    height: 24px;
+    top: 5px;
+    position: relative;
+  }
+
+  &.black-grey {
+    color: $tab-color;
+    g, path {
+      fill: $tab-color;
+    }
+  }
+
+  &.grey {
+    color: $filterColor;
+    g, path {
+      fill: $filterColor;
+    }
+  }
+
+  &.blue {
+    color: $green;
+    g, path {
+      fill: $green;
+    }
+  }
+
+  &.yellow {
+    color: $yellow;
+    g, path {
+      fill: $yellow;
+    }
+  }
+
+  &.green {
+    color: $green;
+    g, path {
+      fill: $green;
+    }
+  }
+
+  &.red {
+    color: $red;
+    g, path {
+      fill: $red;
+    }
+  }
+
+  &.check {
+    background: lighten($grey-light, 0%);
+  }
+}
+
+.salestools__content_total_prospects {
+  //min-width: 100px;
+  text-align: center;
+  position: relative;
+  svg.people {
+    width: 30px;
+    height: 30px;
+  }
+  .salestools__content_widget_indicate {
+    padding-top: 2px;
+  }
+
+  .salestools__content_widget_indicate_text {
+    display: block;
+    font: {
+      size: $widget-size;
+      weight: bold;
+    }
+  }
+}
+
+.salestools__statistic__container {
+  margin: 0 -20px;
+}
+
+.salestools__main_widget {
+  position: relative;
+  padding: 0 16px 0 0;
+  height: 78px;
+  &::before {
+    content: ' ';
+    width: 1px;
+    height: 78px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: $grey-medium;
+  }
+  &:hover {
+    background: lighten($grey-light, 10%);
+    cursor: pointer;
+  }
+}
+
+.salestools__content_widget_text {
+  color: inherit;
+  text-transform: uppercase;
+  font: {
+    size: $size_sm - 2;
+  }
+}
+
+.salestools__content_widget_indicate_text {
+  font: {
+    size: $widget-size - 10;
+    weight: bold;
+  }
+  margin-bottom: 6px;
+}
+
+.salestools__content_widget_footer_text {
+  color: inherit;
+  padding-left: 2px;
+  font: {
+    size: $size_sm - 2;
+  }
+}
+
+.salestools__content_widget_list {
+  position: relative;
+  text-align: center;
+  min-width: 360px;
+  //margin: 0 8px;
+  max-width: 490px;
+  text-align: center;
+  .salestools__content_widget_block {
+    margin: -15px 0;
+    position: relative;
+    min-width: 110px;
+    padding: 18px 20px 0;
+    height: 78px;
+
+    &.check {
+      background: lighten($grey-medium, 10%);
+    }
+
+    &:hover, &:active, &:focus {
+      &.yellow {
+        color: $yellow;
+      }
+      &.grey {
+        color: $textColor;
+      }
+      &.blue {
+        color: $color_1;
+      }
+      &.green {
+        color: $green;
+      }
+    }
+    &::before {
+      content: ' ';
+      width: 1px;
+      height: 78px;
+      background: $grey-medium;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.salestools__content_widget_list_label {
+  position: absolute;
+  bottom: -16px;
+  background: $bg-header-filter;
+  padding: 0 10px;
+  left: calc(50% - 60px);
+  font: {
+    weight: bold;
+    size: $size_sm;
+  }
+}
+
+.salestools__widgets {
+  padding: 0;
+  transform-origin: center;
+  &.company {
+    .salestools__main_widget {
+      padding: 0px;
+      min-width: 120px;
+      width: auto;
+      @include flex-center(row);
+      &.first {
+        padding-left: 0;
+      }
+    }
+
+    .salestools__widget_text_container {
+
+    }
+
+    .salestools__content_widget_indicate_text {
+      display: block;
+    }
+
+    .salestools__content_widget_indicate {
+      @include flex(row, center, center);
+      &.green {
+        color: $green;
+
+        .salestools__widget_text_container {
+          color: $green-widget;
+        }
+      }
+
+      &.active_most {
+        @include filter(hue-rotate, 400deg);
+        .salestools__widget_text_container {
+          color: $green-widget;
+        }
+      }
+
+      &.hot {
+        @include filter(hue-rotate, 220deg);
+        .salestools__widget_text_container {
+          color: $green-widget;
+        }
+
+        .salestools__about_widget {
+          width: 30px;
+        }
+      }
+    }
+
+    .salestools__about_widget {
+      text-transform: uppercase;
+      font-size: $size_sm - 2;
+      width: 65px;
+      display: block;
+    }
+  }
+
+  &.prospects {
+    .salestools__main_widget {
+      padding: 0px;
+      width: auto;
+      min-width: 120px;
+      @include flex-center(row);
+      &.first {
+        padding-left: 0;
+      }
+    }
+
+    .salestools__about_widget {
+      text-transform: uppercase;
+      font-size: $size_sm - 2;
+      //width: 65px;
+      display: block;
+    }
+
+    .salestools__content_widget_indicate {
+
+      &.green {
+        color: $green;
+
+        .salestools__widget_text_container {
+          color: $green-widget;
+        }
+      }
+
+      &.active_most {
+        @include filter(hue-rotate, 400deg);
+        .salestools__widget_text_container {
+          color: $green-widget;
+        }
+      }
+
+      &.hot {
+        @include filter(hue-rotate, 220deg);
+        .salestools__widget_text_container {
+          color: $green-widget;
+        }
+
+        .salestools__about_widget {
+          //width: 30px;
+        }
+      }
+      &.grey {
+        @include filter(grayscale, 100%);
+      }
+    }
+  }
+}
+
+.salestools__content_filter_body {
+  position: relative;
+  overflow: hidden;
+  max-height: 396px;
+  transition: max-height ease .5s;
+
+  &.ng-hide {
+    max-height: 0;
+  }
+}
+
+.md-calendar-day-header {
+  th {
+    font-size: $size;
+  }
+}
+
+.salestools__content_filter_body_left_side {
+  background: $bg_grey_1;
+  width: 360px;
+  padding: 15px 30px 10px;
+  @include border-right(1px, $border_1);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.salestools__content_list_manager {
+  padding: 2px 4px;
+  margin: 2px 3px 0;
+  border: 0;
+  background: none;
+  outline: none;
+  * {
+    outline: none;
+  }
+  .fa {
+    font-size: $filter-icon-manager;
+    color: $filter-manager-color;
+  }
+}
+
+.salestools__content_list_name {
+  max-width: 150px;
+  margin-top: 1px;
+}
+
+.salestools__filter__users_prospects {
+  min-width: 250px;
+  padding: 0 15px 0 0;
+  margin-right: 15px;
+  @include border-right(1px, $border-modal-header);
+}
+
+.salestools__filter__users_prospects_select {
+  max-width: 50%;
+  font-size: $size_sm;
+  option {
+    font: {
+      size: $size_sm;
+    }
+  }
+}
+
+.salestools__filter__users_prospects_label {
+  @include smallText;
+  margin-right: 10px;
+  color: $textColor;
+}
+
+.salestools__content_filter_body_right_side {
+  background: $white;
+  padding: 10px 15px 20px;
+  min-height: 200px;
+  width: calc(100% - 360px);
+}
+
+.salestools__content_filter_body_title {
+  text-transform: uppercase;
+  color: $textColor;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  @include border-bottom(1px, $border_1);
+  font: {
+    size: $size;
+  }
+
+}
+
+.salestools__content_filter_radio_block {
+  background: $bg-radio;
+  padding: 3px;
+  height: 35px;
+  max-width: 250px;
+  margin: 22px auto 36px;
+  border-radius: 60px;
+  input[type=radio] {
+    display: none;
+  }
+}
+
+.salestools__content_filter_label {
+  cursor: pointer;
+}
+
+.salestools__content_filter_radio-button {
+
+}
+
+.salestools__content_filter_row {
+  margin-bottom: 20px;
+  .salestools__sm_row__datepicker,
+  .salestools__sm_row__timepicker {
+    .md-datepicker-button,
+    .md-icon-button {
+      float: right;
+    }
+  }
+}
+
+.salestools__content_filter_row_label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.salestools__form_label {
+  @include smallText;
+  font: {
+    weight: bold;
+  }
+}
+
+.salestools__input {
+  width: 100%;
+  padding: 3px 10px 4px;
+  @include border(1px, $border-modal-header);
+  font: {
+    size: $size;
+  }
+
+  &:focus {
+    border-color: $color_3;
+
+    & + .salestools__input__add-chip {
+      filter: none;
+    }
+  }
+  &.text {
+  }
+  &.password {
+  }
+  &.email {
+  }
+  &.tel {
+  }
+
+  &[disabled] {
+    background-color: #ececec;
+  }
+  &.with_icon {
+    width: 76%;
+    display: inline-block;
+    & ~ i, & ~ .md-icon-button {
+      width: 16%;
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 40px;
+    }
+  }
+}
+
+.salestools__input__add-chip {
+  padding: 0 10px;
+  appearance: none;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 35px;
+  filter: grayscale(100%);
+}
+
+.salestools__textarea {
+  width: 100%;
+  padding: 3px 10px 4px;
+  height: 150px;
+  @include border(1px, $border-modal-header);
+  font: {
+    size: $size;
+  }
+  &[disabled] {
+    background-color: #ececec;
+  }
+}
+
+#big-filter {
+
+  .salestools__select {
+    width: 100%;
+    margin: 0;
+    @include textReg;
+  }
+
+}
+
+.salestools__big-filter-box {
+  margin: 0 -5px;
+  a {
+    margin: 0 5px;
+    &.salestools__content_filter_clear {
+      color: $color_1;
+      position: relative;
+      top: 2px;
+    }
+  }
+  .salestools__content_filter_button {
+    border: 0;
+    margin: 0 5px;
+    border-radius: 4px;
+  }
+}
+
+.salestools__content_filter_icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 60px;
+  background-image: url('../img/sprite-sex-change.png');
+  background-repeat: no-repeat;
+  &.man {
+    background: {
+      position: -62px 2px;
+
+    }
+    &:hover {
+      background-position-y: -48px;
+    }
+    &.active {
+      background: $white;
+      background-position: -62px -48px;
+    }
+  }
+  &.whoman {
+    background: {
+      position: 7px 2px;
+    }
+    &:hover {
+      background-position-y: -48px;
+    }
+    &.active {
+      background-color: $white;
+      background-position: 7px -48px;
+    }
+  }
+  &.all {
+    background: {
+      position: -26px 1px;
+    }
+    &:hover {
+      background-position-y: -48px;
+    }
+    &.active {
+      background-color: $white;
+      background-position: -26px -48px;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.salestools__content_filter_radio_block_text {
+  font-size: $size_sm;
+  text-align: center;
+  position: absolute;
+  bottom: -18px;
+  left: -9px;
+  width: 48px;
+}
+
+.salestools__content_filter_setting_buttons {
+  .btn {
+    background: $btn-bg;
+    border-color: $grey-text;
+    color: $grey-text;
+
+    .fa {
+      color: $grey-text;
+    }
+
+    &:hover {
+      border-color: $textColor;
+      color: $textColor;
+      .fa {
+        color: $textColor;
+      }
+    }
+  }
+}
+
+.icon-calendar {
+  background: {
+    color: $bg_grey_1;
+  }
+  display: inline-block;
+  height: 20px;
+  width: 38px;
+  &:before {
+    content: url('../img/calendar.png');;
+  }
+}
+
+.salestools__content_filter_date_block_interval {
+  height: 44px;
+  position: relative;
+  .md-datepicker-calendar-icon, .md-datepicker-button {
+    display: none;
+  }
+  .md-datepicker-input-container {
+    border: 0;
+  }
+
+  .md-datepicker-input {
+    text-align: center;
+  }
+
+  .md-datepicker-input-container {
+    margin-left: 0;
+  }
+
+  .md-datepicker-expand-triangle {
+    border: 0;
+  }
+
+  .md-datepicker-triangle-button.md-button.md-icon-button {
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    left: -44px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .md-button:not([disabled]).md-focused {
+    background: none;
+  }
+}
+
+.md-datepicker-open .md-datepicker-input {
+  margin: 0;
+  height: auto;
+}
+
+.md-datepicker-input-mask {
+  display: none;
+}
+
+.md-datepicker-calendar-pane.md-pane-open {
+  background: $white;
+}
+
+.salestools__date_link_toggle {
+  margin: 0 25px;
+  * {
+    color: $filterColor;
+  }
+}
+
+.salestools__date_icon {
+  position: relative;
+  top: 5px;
+  right: 0px;
+  padding: 0;
+  &:before {
+    position: absolute;
+    content: ' ';
+    height: 1px;
+    width: 60px;
+    background: $light;
+    left: -12px;
+    top: 10px;
+    z-index: 9;
+  }
+
+  i {
+    //background: $bg_grey_1;
+    position: relative;
+    z-index: 10;
+    padding: 0 2px 0 7px;
+  }
+}
+
+.salestools__content_filter_toggle_link {
+  padding: 15px 24px 10px;
+  position: relative;
+  display: block;
+  @include border-left(1px, $grey-medium);
+  //@include border-bottom(1px, $grey-medium);
+  &.big-button {
+    padding: 27px 24px 20px;
+    .fa {
+      top: 40px;
+    }
+  }
+  &.press {
+    background: $grey-light;
+    .fa {
+      &::before {
+        content: "\f175";
+      }
+    }
+  }
+  .fa {
+    position: absolute;
+    font-size: $size + 1;
+    top: 28px;
+    right: 27px;
+    color: $border-check-view;
+  }
+}
+
+.datepickerdemoBasicUsage {
+  /** Demo styles for mdCalendar. */
+}
+
+.datepickerdemoBasicUsage md-content {
+  padding-bottom: 200px;
+}
+
+.datepickerdemoBasicUsage .validation-messages {
+  font-size: $size_sm;
+  color: #dd2c00;
+  margin: 10px 0 0 25px;
+}
+
+a.md-default-theme:not(.md-button), a:not(.md-button) {
+  color: inherit;
+  &:hover, &:active, &:focus {
+    color: inherit;
+
+  }
+}
+
+a:not(.md-button) {
+}
+
+.md-calendar-date:not(.md-disabled) .md-calendar-date-selection-indicator {
+  @include textReg;
+}
+
+.md-default-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-default-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {
+  background: $color_1;
+}
+
+.md-default-theme .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator, .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator {
+  border-color: $color_1;
+}
+
+.salestools__indicate {
+  position: absolute;
+  cursor: pointer;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+}
+
+.salestools__modal {
+  .salestools__prospect_indicate_tooltip {
+    top: -45px;
+    left: 5px;
+
+    &::before {
+      bottom: 10px;
+      left: -10px;
+
+      border: 5px solid transparent;
+      border-right: 5px solid $white;;
+    }
+  }
+}
+
+.salestools__container_prospects--accordion.salestools__container_prospects--accordion.salestools__container_prospects--accordion.salestools__container_prospects--accordion {
+  border-bottom: none;
+}
+
+.salestools__container_prospects--accordion {
+  .salestools__prospect_indicate, .salestools__indicate {
+    width: 6px;
+  }
+
+  .salestools__prospect__img_persone {
+    margin-left: 15px;
+  }
+
+  .salestools__prospect {
+    min-height: 94px;
+    height: auto;
+    background-color: white;
+    border-bottom: 1px solid $grey-medium;
+  }
+
+  .salestools__all__inf__prospect_line {
+    padding-top: 12px;
+    width: calc(100% - 88px);
+  }
+}
+
+.salestools__prospect_description {
+  color: #333;
+  font-size: $size_sm;
+  font-weight: 400;
+  padding: 25px 15px 20px;
+  clear: both;
+  border-top: 1px solid #fbfbfb;
+
+  &_header {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+
+.salestools__prospect_indicate_tooltip {
+  opacity: 0;
+  display: none;
+  background: $white;
+  padding: 1px;
+  position: absolute;
+  top: -45px;
+  left: -17px;
+  border-radius: 4px;
+  @include shadow (0px, 4px, 7px, 0px, $bg-alpha-black);
+
+  &::before {
+    width: 0;
+    height: 0;
+    content: ' ';
+    position: absolute;
+    bottom: -9px;
+    left: 14px;
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid $white;
+  }
+}
+
+.salestools__prospect_indicate_tooltip_avatar {
+  width: 100%;
+  border-radius: 4px;
+}
+
+@keyframes opacity-tooltip {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes opacity-tooltip {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sizeIcons {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes sizeIcons {
+  from {
+    transform: scale($scaleW-min);
+  }
+  to {
+    transform: scale($scaleW-max);
+  }
+}
+
+@keyframes sizeIconsOut {
+  from {
+    transform: scale($scaleW-max);
+
+  }
+  to {
+    transform: scale($scaleW-min);
+  }
+}
+
+.salestools__users_change_block {
+  color: $white;
+  padding-top: 5px;
+  margin: 0 10px;
+}
+.color_users{
+  display: inline-block;
+}
+.color_user {
+  margin: 0 1px;
+  padding: 2px;
+  float: left;
+  width: 40px;
+  height: 40px;
+  color: $white;
+  text-align: center;
+  border-radius: 90px;
+  text-transform: lowercase;
+  background: $grey-icon-dark;
+  position: relative;
+  font: {
+    size: $size_sm + 2;
+  }
+  &.salestools__color_avatar_all,
+  &.salestools__color_avatar_me {
+    padding-top: 13px;
+    font: {
+      weight: bold;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+  }
+  &.selected {
+    &:after {
+      content: ' ';
+      height: 3px;
+      width: 10px;
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      left: calc(50% - 5px);
+      background: inherit;
+    }
+  }
+}
+
+.salestools__type_change_block {
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  padding: 6px 14px 6px;
+  min-width: 80px;
+  position: relative;
+  background: lighten($grey-medium, 5%);
+  color: white;
+  &.check {
+    background: darken($grey-medium, 10%);
+  }
+  input {
+    display: none;
+  }
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+  .fa {
+    position: absolute;
+    bottom: -34px;
+    right: -2px;
+    font-size: 30px;
+    padding: 10px;
+    color: inherit;
+    display: none;
+    font-size: 18px;
+  }
+  &.found {
+    color: $green;
+    left: 4px;
+    g {
+      fill: $green;
+    }
+    border-radius: 8px 0 0 8px;
+    border-right: 0;
+  }
+  &.yellow {
+    g {
+      fill: $yellow;
+    }
+    color: $yellow;
+  }
+  &.grey {
+    color: $grey-icon-light;
+    right: 4px;
+    g {
+      fill: $grey-icon-light;
+    }
+    border-radius: 0px 8px 8px 0px;
+    border-left: 0px;
+
+    &.check {
+      g {
+        fill: white;
+      }
+    }
+  }
+
+  .salestools__text_change_period {
+    font: {
+      size: $size_sm;
+      weight: bold;
+    }
+    text-transform: uppercase;
+  }
+
+}
+
+.change-type-filter {
+  margin: 5px 10px 17px;
+  position: relative;
+  max-width: 250px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.salestools__content_company {
+  background-color: $white;
+  margin-bottom: 4px;
+  .salestools__block_date {
+    height: 94px;
+  }
+}
+
+.salestools__content_avatar_block {
+  width: 70px;
+  height: 72px;
+  background: $grey-light_2;
+  margin: 12px 20px 0;
+  @include flex-center(row);
+}
+
+.salestools__content_company_avatar {
+  //width: 100%;
+  //height: 50px;
+  //margin-bottom: 6px;
+  img {
+    width: 100%;
+  }
+  //overflow-y: hidden;
+}
+
+.salestools__content_nameblock {
+  margin: 10px 0 0;
+  width: 220px;
+  a {
+    color: $color_1;
+  }
+}
+
+.salestools__content_small_ingormations {
+  font: {
+    size: $size_sm;
+  }
+  color: $border-check-view;
+  line-height: 1.2;
+  p {
+    clear: both;
+  }
+}
+
+.salestools__content_company-list_company_prospect-count {
+  .prospects-icon {
+    position: relative;
+    top: 2px;
+  }
+}
+
+.small-text {
+  font: {
+    size: $size_sm;
+  }
+}
+
+.salestools__content_nameblock_text {
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+  color: $color_1;
+  margin-bottom: 6px;
+  display: inline-block;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color_1 !important;
+  }
+}
+
+.salestools__content_indastrial {
+  font: {
+    size: $size_sm;
+  }
+  .company-icon {
+    width: 12px;
+    height: 14px;
+    margin-right: 4px;
+    text-align: center;
+    color: #ccc;
+    position: relative;
+    float: left;
+    top: -2px;
+  }
+  margin-bottom: 4px;
+  color: $border-img;
+  text-transform: uppercase;
+  @include overflow;
+}
+
+.salestools__content_count-people {
+
+}
+
+.salestools__content_location {
+}
+
+.salestools__content_company-list_company_prospect-count_text {
+  padding-top: 4px;
+}
+
+.prospects-icon {
+  width: 15px;
+  height: 15px;
+  path {
+    fill: $color-small;
+  }
+}
+
+.salestools__content_company_contacts {
+  //max-width: 220px;
+  margin: 8px 12px 0 0px;
+  width: 260px;
+  .salestools__prospect__contacts_text {
+    margin-bottom: 12px;
+  }
+}
+
+.salestools__grey_block {
+  padding: 15px;
+}
+
+.salestools__company__contacts_analitics {
+  background: $grey-light_2;
+  height: 94px;
+  width: 300px;
+}
+
+.salestools__content_company_info {
+  width: calc(100% - 38px);
+}
+
+.salestools__dashboard_settings_block {
+  padding: 15px;
+}
+
+.salestools__dashboard_block {
+  background: $white;
+  margin-bottom: 20px;
+  @include border-bottom(2px, rgba(0, 0, 0, .1));
+}
+
+.salestools__dashboard_block_header {
+
+}
+
+.salestools__dashboard_block_title {
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+  color: $textColor;
+  @include border-bottom(1px, $grey-light_2);
+  padding: 0 15px 15px;
+  margin: 0 -15px 15px;
+}
+
+.salestools__dashboard_block_footer {
+  margin: 0px -10px;
+  .salestools__btn {
+    margin: 0 10px;
+  }
+}
+
+.salestools__btn {
+  padding: 4px 20px;
+  color: $white;
+  border-radius: 4px;
+  font: {
+    size: $size;
+    weight: normal;
+  }
+
+  &.blue {
+    background: $color_1;
+    &:hover {
+      background: $color_2;
+    }
+  }
+
+  &.green {
+    background: $green;
+    &:hover {
+      background: $green_2;
+    }
+  }
+
+  &.yellow {
+    background: $yellow;
+    &:hover {
+      background: $yellow_2;
+    }
+  }
+
+  &.red {
+    background: $red;
+    &:hover {
+      background: $red_2;
+    }
+  }
+
+  &.grey {
+    background: $grey-medium;
+    &:hover {
+      background: darken($grey-medium, 20%);
+    }
+  }
+
+  &, &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
+
+.input-group-addon {
+  padding: 0;
+  border: 0;
+}
+
+.colorpicker-element .add-on i, .colorpicker-element .input-group-addon i {
+  height: 28px !important;
+  width: 28px !important;
+}
+
+.input-group-addon {
+  background: none;
+  height: 28px;
+  display: block;
+  width: 28px;
+  float: right;
+  vertical-align: bottom !important;
+}
+
+.colorpicker-component {
+  max-width: 150px;
+  margin-bottom: 15px;
+  input {
+    border-right: 0;
+    width: calc(100% - 28px);
+    float: left;
+  }
+}
+
+#dropZone {
+  height: 238px;
+  font-size: $size_sm;
+  background: $grey-light center no-repeat;
+  //@include border(1px, $borer-dark);
+  padding: 10px;
+  text-align: right;
+  color: $grey-text;
+}
+
+.salestools__dropzone_form_block {
+  position: relative;
+  margin: -10px -10px 10px;
+  img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+}
+
+.salestools__team_page_avatars {
+  margin-right: 10px;
+}
+
+.salestools__team_page_user_name {
+}
+
+.salestools__team_page_text {
+  padding-top: 2px;
+  display: inline-block;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background: none;
+}
+
+.salestools__table {
+  background: $white;
+
+  thead {
+    background: $color_1;
+    color: $white;
+    th {
+      text-align: center;
+    }
+  }
+
+  tbody {
+
+    td {
+      text-align: center;
+    }
+
+    & td:first-child {
+      text-align: left;
+      position: relative;
+      padding-left: 10px;
+    }
+  }
+}
+
+.plus-icon {
+  @include border(2px, $grey-icon);
+  border-radius: 90px;
+  margin-left: 8px;
+  color: $grey-icon;
+  height: 21px;
+  width: 21px;
+  position: relative;
+  top: 3px;
+  .fa {
+    position: relative;
+    top: -3px;
+    color: $grey-icon;
+    font-size: $size;
+  }
+
+  &.active {
+    border-color: $green;
+    .fa {
+      color: $green;
+
+    }
+  }
+}
+
+.salestools__title_team {
+  margin-bottom: 20px;
+}
+
+.salestools__color-user-team {
+  width: 4px;
+  height: 100%;
+  background: $grey-medium;
+  margin-right: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.salestools__table {
+  &.salestools__table_team {
+    tr {
+      td {
+        padding: 8px 8px 0px;
+      }
+    }
+  }
+}
+
+.invite_button {
+  svg {
+    position: relative;
+    top: 1.5px;
+    margin-right: 8px;
+    g {
+      fill: $white;
+    }
+  }
+}
+
+.salestools__modal_invites, .salestools__modal_blue {
+  .md-content {
+    background: none;
+    margin-top: 30%;
+    border-radius: 2px;
+  }
+
+  .modal-header {
+    padding: 15px 20px 15px;
+    background: $color_1;
+    color: $white;
+    .salestools__modal_title {
+      color: $white;
+      width: 100%;
+    }
+  }
+
+  .modal-body {
+    background: $white;
+    padding: 20px;
+  }
+}
+
+.salestools__modal_title {
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+  width: 100%;
+}
+
+.salestools__title_team_label {
+  font: {
+    size: $size_sm;
+  }
+  color: $grey-icon;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.salestools__integrations_content {
+  background: $white;
+}
+
+.salestools__integrations_header {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-header {
+  padding: 15px 15px 15px;
+  color: #fff;
+  border-bottom: 0;
+  &.blue {
+    background: $color_1;
+    color: $white;
+  }
+}
+
+.modal-content {
+  margin: 30% auto 0%;
+  border: 0;
+  border-radius: 2px;
+}
+
+.salestools__integration {
+  line-height: 1.6;
+  input[type=radio] {
+    margin-right: 10px;
+  }
+}
+
+.salestools__integrations_tab_change {
+  position: relative;
+  margin: -10px -20px -30px;
+}
+
+.salestools__integrations_tabs_list {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: $bg-list;
+  min-height: 300px;
+}
+
+.salestools__integrations_tab {
+  line-height: 1.5;
+  padding: 10px 15px;
+  background: $bg-header-filter;
+  @include border-bottom(1px, $grey-light);
+
+  color: $grey-icon;
+  position: relative;
+  cursor: pointer;
+  &.active {
+    @include border-right(0px, $grey-light);
+    background: $white;
+    color: $textColor;
+    .salestools__integrations_tab_border {
+      background: $green;
+    }
+    .circle-indicate {
+      border-color: $green;
+      .circle-indicate_inside {
+        display: block;
+      }
+    }
+  }
+}
+
+.salestools__integrations_tab_radio {
+  display: none;
+}
+
+.salestools__integrations_tab_border {
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $grey-icon;
+}
+
+.circle-indicate {
+  background: $white;
+  @include border(2px, $grey-medium);
+  border-radius: 90px;
+  width: 15px;
+  height: 15px;
+  margin: 0 8px 0 0;
+  margin-top: 5px;
+  padding: 2px;
+}
+
+.circle-indicate_inside {
+  background: $green;
+  border-radius: 90px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.salestools__table_integretions {
+  .salestools__table_head {
+    background: $date-color;
+    color: $white;
+    th:first-child {
+      width: 75px;
+    }
+
+    th:nth-child(2) {
+      width: 300px
+    }
+
+    th:nth-child(2) {
+      text-align: left;
+      padding-left: 20px;
+    }
+    th {
+      color: $white;
+      text-align: center;
+      padding: 10px 5px;
+      font: {
+        size: $size;
+        weight: normal;
+      }
+    }
+  }
+  width: 100%;
+  td {
+    padding: 10px 5px;
+    text-align: center;
+  }
+  tbody {
+    tr {
+      background: $white;
+      @include border-bottom(1px, $filter-manager-color);
+    }
+
+    tr:hover .fa {
+      display: block;
+    }
+
+    tr td:first-child {
+      background: $grey-light;
+
+    }
+
+    tr.default {
+
+    }
+
+    tr td:nth-child(2) {
+      background: $grey-light_3;
+    }
+    tr td:nth-child(2) {
+      text-align: left;
+      padding-left: 20px;
+    }
+    td.active {
+      .fa {
+        display: block;
+        color: $green;
+        font-size: $size-title - 2;
+      }
+    }
+    td {
+      .fa {
+        font-size: $size-title - 2;
+        color: $grey-text;
+        display: none;
+      }
+    }
+    .date-table {
+      font-size: $size_sm;
+      color: $color-date;
+      text-transform: uppercase;
+    }
+    .clear_tr {
+      border: 0;
+      td.cleartr {
+        background: $bg-body;
+        width: auto;
+        color: $date-color;
+        padding: 8px 0 8px;
+      }
+    }
+  }
+  .salestools__more-actions {
+    position: relative;
+    height: 38px;
+    margin: -10px -5px;
+    width: 50px;
+  }
+}
+
+.salestools__table_title_text {
+  font: {
+    size: $size;
+    color: $textColor;
+    weight: lighter;
+  }
+  .fa {
+    color: $small-icon-color;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.salestools__table_integretions_logo {
+  height: 14px;
+  margin-right: 10px;
+}
+
+.default-active {
+  font: {
+    size: $size_sm;
+    weight: bold;
+  }
+  color: $white;
+  background: $green;
+  padding: 2px 4px;
+  margin: 0 5px;
+  border-radius: 2px;
+}
+
+.salestools__team_block_config {
+  color: $white;
+  padding: 8px 20px 14px;
+  height: 100%;
+  &.blue {
+    background: $color_1;
+    //@include border-left(6px, $color_3);
+  }
+}
+
+.salestools__team_block_statistic_block {
+  margin: 0 10px;
+  padding-top: 20px;
+  color: $color_statistic;
+
+  & > div {
+    margin: 0 10px;
+  }
+}
+
+.statistic-mail-icon {
+  .icon-contacts.mail-svg {
+    margin-right: 5px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    .fill-svg {
+      fill: $color_statistic;
+    }
+  }
+}
+
+.cloud-grey-icon {
+  width: 23px;
+  height: 18px;
+  //content: url('../img/cloud-grey.png');
+  background-image: url('../img/cloud-grey.png');
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.db-icon {
+  width: 16px;
+  height: 16px;
+  //content: url('../img/db-icon.png');
+  background-image: url('../img/db-icon.png');
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.salestools__billing_content {
+  max-width: 1600px;
+  margin-bottom: 30px;
+}
+
+.salestools__billing_left_side {
+
+}
+
+.salestools__billing_right_side {
+  margin: 0 0px 0 -30px;
+  background: $white;
+  position: relative;
+  @include border-bottom(4px, $grey-content-border);
+}
+
+.salestools__billing_right_side_white,
+.salestools__billing__cards_list {
+  height: 74vh;
+}
+
+.scroll {
+  overflow-y: auto;
+  outline: none;
+  * {
+    outline: none;
+  }
+}
+
+.salestools__billing_title_header_text {
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+}
+
+.salestools__billing_title_header {
+  padding: 10px 20px;
+  color: $white;
+  position: relative;
+  &.dark {
+    background: $color_title_2;
+  }
+  &.light {
+    background: $color_title_1;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.add-card-icon {
+  display: block;
+  width: 20px;
+  height: 14px;
+  //content: url('../img/add_card.png');
+  background-image: url('../img/add_card.png');
+  background-size: cover;
+}
+
+.salestools__billing__card_container {
+  padding: 20px;
+  img {
+    //@include grayscale(1);
+  }
+  &.active {
+    background: $grey-light_3;
+
+    .salestools__billing__main-card {
+      //color: darken($grey-medium, 40%);
+    }
+
+    img {
+      @include grayscale(0);
+    }
+
+    .salestools__billing__card {
+      background: $white;
+    }
+
+  }
+}
+
+.salestools__billing__card {
+  background: $btn-bg;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.salestools__billing__main-card.salestools__billing__main-card {
+  @include interaction-color(darken($grey-medium, 40%));
+  color: darken($grey-medium, 40%);
+  border-radius: 4px;
+  font-size: $size_sm;
+  position: relative;
+  top: -4px;
+  background: $grey-light;
+  padding: 4px 8px;
+
+  &.check {
+    background: $green-light;
+    color: $white;
+  }
+}
+
+.salestools__billing__card_logotype {
+  margin-bottom: 15px;
+}
+
+.salestools__billing__card_number {
+  margin-bottom: 15px;
+  color: $grey-icon;
+}
+
+.salestools__billing__card_footer {
+  font: {
+    size: $size_sm;
+  }
+  color: $grey-medium;
+  .salestools__billing__main-card {
+  }
+}
+
+.salestools__billing_right_side_grey {
+  background: $grey-light_3;
+  padding: 10px 20px;
+  width: 120px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.salestools__billing_right_side_white {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 10px 20px;
+  & .salestools__billing_invoice:last-child {
+    border: 0;
+  }
+}
+
+.salestools__billing_invoice_date {
+  width: 120px;
+  margin-left: -20px;
+  position: relative;
+}
+
+.salestools__billing_invoice_date_text {
+  text-transform: uppercase;
+  color: $grey-icon;
+  font: {
+    size: $size_sm;
+  }
+}
+
+.circle-date {
+  border-radius: 90px;
+  @include border(4px, $white);
+  width: 14px;
+  height: 14px;
+  background: $grey-medium;
+  position: absolute;
+  top: 4px;
+  right: -7px;
+}
+
+.salestools__billing_invoice_user_name {
+  @include lgText(500);
+  margin: 0 20px;
+  font-size: $size_sm;
+  line-height: 1.2;
+  color: dimgrey;
+  //padding-top: 4px;
+  text-transform: uppercase;
+}
+
+.salestools__billing_invoice_order {
+  @include lgText(bold);
+  color: $date-color;
+  padding-top: 2px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.salestools__billing_invoice_status {
+  margin: 0 20px;
+  border-radius: 4px;
+  padding: 3px 5px 4px;
+  margin-top: 2px;
+  font: {
+    size: $size_sm;
+    weight: 300;
+  }
+  color: $white;
+  &.green {
+    background: $green;
+  }
+  &.red {
+    background: $red;
+  }
+  &.blue {
+    background: $color_1;
+  }
+  &.yellow {
+    background: $yellow;
+  }
+}
+
+.salestools__billing_invoice {
+  clear: both;
+  padding: 10px 0;
+  height: 42px;
+  @include border-bottom(1px, $grey-light_3);
+
+}
+
+.salestools__billing_add-card_link {
+  outline: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  .fa {
+    color: white;
+    position: absolute;
+    bottom: -4px;
+    right: -5px;
+    font-size: $size_sm - 2;
+    background: $color_title_2;
+    padding: 1px 2px;
+    border-radius: 4px;
+  }
+}
+
+.salestools__billing_invoice_user_link {
+  color: dimgrey;
+}
+
+.salestools__subscription_title_text {
+  color: $white;
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+}
+
+.salestools__subscriptions_title {
+  margin-bottom: 10px;
+}
+
+.header_title {
+  color: $white;
+
+  &.small_padding {
+    padding: 12px 15px;
+  }
+
+  &.big_padding {
+    padding: 20px;
+  }
+
+  &.blue {
+    background: $color_title_1;
+  }
+
+  &.blue-light {
+    background: $color_title_2;
+  }
+}
+
+.salestools__subscriptions_list_content {
+
+}
+
+.salestools__subscriptions_list_title {
+  color: $grey-text;
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+  margin: 20px 0;
+
+}
+
+.salestools__subscription_user_name {
+  min-width: 200px;
+  padding-top: 10px;
+}
+
+.salestools__subscription_user_name_text {
+  font: {
+    weight: bold;
+  }
+  margin-bottom: 10px;
+}
+
+.salestools__subscription_container {
+  background: $white;
+  //@include border-bottom(3px, $border-big-user-team);
+}
+
+.salestools__subscription {
+  //@include border-bottom(1px, $border-user-team);
+}
+
+.salestools__subscription__avatar_block {
+  padding: 15px 20px 13px;
+  width: calc(100% - 124px);
+}
+
+.salestools__subscription_avatar {
+  width: 60px;
+  height: 60px;
+  margin: 0 15px 0 0;
+  border-radius: 90px;
+  @include border(4px, $borer-dark);
+}
+
+.salestools__subscription_avatar_img {
+  width: 100%;
+}
+
+.circle-status {
+  width: 10px;
+  height: 10px;
+  background: $color_1;
+  border-radius: 90px;
+  margin: 5px 4px 0;
+}
+
+.salestools__subscription_date {
+  font: {
+    weight: 400;
+    size: $size_sm;
+  }
+  color: $grey-icon;
+  height: 88px;
+  padding: 0 15px;
+  @include flex-center(column);
+}
+
+.salestools__subscription_plan {
+  background: $bg-list;
+  width: 124px;
+  height: 88px;
+  a {
+    color: $color_1;
+  }
+}
+
+.salestools__plan_navigate {
+  background: $grey-light;
+  width: 44px;
+  height: 88px;
+  @include flex(column, space-between, center);
+
+}
+
+.salestools__subscription_plan_link {
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+  color: $grey-icon;
+  margin: 20px;
+  color: $color_1;
+}
+
+.salestools__subscription_plan_credit {
+  text-align: center;
+  padding-top: 8px;
+  font: {
+    weight: normal;
+  }
+  color: $grey-icon;
+  strong {
+    margin-bottom: 4px;
+    display: block;
+    font: {
+      size: $size-title;
+      weight: bold;
+    }
+  }
+  .small {
+    text-transform: uppercase;
+    font-size: $size_sm - 2;
+  }
+  min-width: 95px;
+  display: inline-block;
+}
+
+.salestools__subscriptions_list_container {
+
+  &.manager {
+    .salestools__subscription_date {
+      display: inline-block;
+      padding-top: 32px;
+    }
+
+    .salestools__subscription_plan {
+      text-align: center;
+    }
+  }
+
+  .salestools__subscription_container {
+    margin-bottom: 4px;
+
+  }
+
+  & .salestools__subscription_container:last-child {
+    margin-bottom: 0;
+  }
+
+  &.not-active {
+    .salestools__subscription_container {
+      background: $bg_grey_1;
+
+    }
+    .salestools__subscription_user_name_text {
+      color: $grey-icon;
+    }
+
+  }
+}
+
+.salestools__subscription_button_cencel {
+  padding-top: 8px;
+}
+
+.salestools__descriptions_modal {
+  margin-bottom: 20px;
+}
+
+.salestools__subscriptions_list {
+  margin-bottom: 30px;
+}
+
+.salestools__subscription_button {
+  border-radius: 2px;
+  width: 26px;
+  height: 20px;
+  color: $white;
+  text-align: center;
+  .fa {
+    color: white;
+    font-size: 19px;
+  }
+  &.green {
+  }
+
+  &.red {
+  }
+
+  .salestools__stop_subscriptions {
+    width: 16px;
+    height: 16px;
+  }
+  .salestools__change_subscriptions {
+  }
+
+  .salestools__change_subscriptions, .salestools__stop_subscriptions {
+    position: relative;
+    &:hover {
+    }
+  }
+}
+
+.salestools__plan_navigate
+.salestools__subscription_button {
+  &:before {
+    opacity: 0;
+    @include transition(opacitty 1s ease-in-out);
+  }
+
+  &:hover:before {
+    opacity: 1;
+
+  }
+}
+
+.salestools__subscription_history_list {
+  & .salestools__subscription_history_item:last-child {
+    border: 0;
+  }
+  margin-bottom: 30px;
+  overflow-y: auto;
+  max-height: 700px;
+}
+
+.salestools__subscription_history_item {
+  background: white;
+  //padding: 10px 20px;
+  @include border-bottom(1px, $border-big-user-team);
+}
+
+.salestools__subscription_history_massage {
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+  color: $textColor;
+  font: {
+    weight: bold;
+    size: $size;
+  }
+}
+
+.salestools__subscription_history_user_avatar {
+  width: 32px;
+  height: 32px;
+  img {
+    width: 100%;
+  }
+
+}
+
+.salestools__subscription_history_user_text {
+  font: {
+    weight: lighter;
+    size: $size;
+  }
+  margin: 0 10px;
+  color: $grey-icon;
+  padding-top: 8px;
+}
+
+.salestools__subscription_history_date {
+  color: $grey-icon;
+}
+
+.input-outside-container {
+  margin: 0 -5px;
+  .input-outside {
+    margin: 0 -10px;
+  }
+}
+
+.salestools__acquire_list_companies {
+  padding: 5px;
+  background: $grey-light;
+  @include border(1px, $grey-content-border);
+  max-height: 70vh;
+  overflow: auto;
+  width: 323px;
+}
+
+.salestools__acquire_company_item {
+  background: $white;
+  padding: 1px;
+  margin-bottom: 2px;
+  height: 75px;
+  overflow-y: hidden;
+  @include border-bottom(1px, lighten($border-check-view, 25%));
+  &.check {
+    position: relative;
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 3px;
+      background: $green;
+      height: 75px;
+    }
+  }
+}
+
+.salestools__acquire_company_avatar {
+  width: 72px;
+  height: 72px;
+}
+
+.salestools__acquire_img {
+  width: 100%;
+}
+
+.salestools__acquire_comany_leads_content {
+  width: calc(100% - 335px);
+  background: white;
+  margin-bottom: 30px;
+}
+
+.salestools__acquire_name_company {
+  font: {
+    size: $size_sm;
+    weight: lighter;
+  }
+  width: calc(100% - 82px);
+  padding-top: 8px;
+}
+
+.salestools__acquire_name_company_text {
+  font: {
+    weight: bold;
+    size: $size_sm + 1;
+  }
+  color: $textColor;
+  margin-bottom: 6px;
+}
+
+.salestools__acquire_industrial_local {
+  color: $filter-manager-color;
+}
+
+.salestools__acquire_industrial_text {
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.salestools__acquire_locaiton_text {
+  font: {
+    size: $size_sm - 1;
+  }
+}
+
+.dropdown-menu {
+  &.right {
+    right: 44px;
+    left: auto;
+    top: -2px;
+    border-radius: 0;
+    border: 0;
+    background: $color_2;
+    min-width: 96px;
+    box-shadow: 0 0 0;
+    padding: 0;
+
+    li {
+      a {
+        padding: 11.7px 18px 11.7px;
+        color: white;
+        text-align: center;
+        .fa {
+          font-size: 24px;
+          padding: 0;
+          margin: 0;
+          color: white;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          color: $color_1;
+          background: lighten($color_2, 0%);
+          .fa {
+          }
+        }
+      }
+    }
+  }
+}
+
+.salestools__circle-button-angular[aria-expanded="true"] {
+  background: $color_2;
+}
+
+.ns-box {
+  padding: 10px 20px;
+}
+
+.ns-close {
+  color: white;
+}
+
+.ns-effect-exploader .ns-close:hover::before, .ns-effect-exploader .ns-close:hover::after {
+  background: white;
+}
+
+.ns-effect-exploader {
+  background: darken($color_2, 10%);
+  color: white;
+}
+
+.shape-progress path {
+  stroke: $green;
+}
+
+.ns-box-inner p {
+  color: $textColor;
+}
+
+.salestools__buttom_flag {
+  display: block;
+  margin-bottom: 6px;
+  padding: 4px 0;
+}
+
+.salestools__filter_icon_button {
+  margin: 0 10px;
+  width: 38px;
+  text-align: center;
+  padding-top: 0px;
+  .fa {
+    color: white;
+    font-size: $size + 1;
+  }
+}
+
+.selectize-input {
+  border-radius: 0;
+  min-height: 28px;
+  padding: 2px 10px 4px;
+  outline: none;
+  * {
+    outline: none;
+  }
+  box-shadow: 0 0 0;
+
+  &.focus {
+    @include border(1px, $border-modal-header);
+    box-shadow: 0 0 0;
+  }
+}
+
+.bootstrap-select {
+  width: 100%;
+  .btn {
+    @include border(1px, $border-modal-header);
+    border-radius: 0px;
+    padding: 3px 12px;
+    width: 100%;
+  }
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 100%;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+
+.btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus, .open > .btn-default.dropdown-toggle:hover, .open > .btn-default.dropdown-toggle:focus, .open > .btn-default.dropdown-toggle.focus {
+  background: white !important;
+}
+
+.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+  background: white !important;
+}
+
+.btn-default {
+  border-color: $border-modal-header;
+}
+
+.salestools__popover {
+  position: relative;
+}
+
+.notification::before,
+.notification::after,
+.notification-count {
+  color: #fff;
+}
+
+.notification::before {
+  display: block;
+  content: "\f0f3";
+  font-family: "FontAwesome";
+  transform-origin: top center;
+  font-size: 21px;
+  color: #0f4f7b;
+}
+
+.notification-count {
+  font-weight: 600;
+  position: absolute;
+  border-radius: 100%;
+  background: $red;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: transform, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  top: 17px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 16px;
+  padding: 0;
+  font-size: 10px;
+  border: 2px solid $color_1;
+}
+
+.notification.notify::before {
+  animation: ring 1.5s ease;
+}
+
+.notification-count.show-count {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(35deg);
+  }
+  12.5% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  37.5% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  62.5% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.salestools__popover_content {
+  width: 230px;
+  background: white;
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.2);
+  &.bottom {
+    top: 20px;
+    left: -20px;
+    &::before {
+      top: -15px;
+      border-bottom: 15px solid white;
+    }
+  }
+
+  &.top-right {
+    right: -12px;
+    top: -65px;
+    &::before {
+      bottom: -15px;
+      border-top: 15px solid white;
+      right: 32px;
+    }
+  }
+
+  &.bottom-right {
+    right: -42px;
+    top: 20px;
+    &::before {
+      top: -15px;
+      border-bottom: 15px solid white;
+      right: 32px;
+    }
+  }
+
+  &.top {
+    top: -100px;
+    left: -12px;
+    &::before {
+      bottom: -15px;
+      border-top: 15px solid white;
+    }
+  }
+  &::before {
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    content: ' ';
+    position: absolute;
+
+  }
+
+  &.minimal {
+    width: 130px;
+    padding: 0 0px 10px;
+    text-align: left;
+    li:hover {
+      background: none;
+    }
+  }
+  .salestools__header_widget_notify_header {
+    background-color: #2f5474;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 13px;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    opacity: 0.44;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  &.salestools__header_widget_notify {
+    background: rgba(55, 98, 133, 0.95);
+    width: 301px;
+    height: 274px;
+    border-radius: 9px;
+    padding: 0px;
+    top: 25px;
+    .salestools__header_widget_notify_content {
+      height: 196px;
+      overflow-y: auto;
+    }
+    .salestools__header_widget_notify_row {
+      padding: 10px 15px;
+      color: white;
+      font-family: Roboto;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 400;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      &_image {
+        align-items: center;
+        flex: 1 0 2%;
+        height: 14px;
+        &_icon {
+          height: 14px;
+          width: 20px;
+        }
+      }
+      &_content {
+        align-items: center;
+        flex: 1 0 70%;
+        padding: 0 10px;
+        max-height: 28px;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+      }
+      &_time {
+        align-items: center;
+        flex: 2 0 0px;
+        color: #8bb0ca;
+      }
+    }
+    .mCSB_container_wrapper {
+      margin-right: 0px;
+      > .mCSB_container {
+        padding-right: 0px;
+      }
+    }
+    .mCSB_scrollTools {
+      .mCSB_draggerContainer {
+        margin: 0px;
+      }
+    }
+  }
+  .salestools__header_widget_notify_footer {
+    color: white;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 10px;
+    display: flex;
+    padding: 15px;
+    span:last-child {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.salestools_input {
+  width: 100%;
+  font: {
+    size: $size;
+  }
+  padding: 5px 10px;
+}
+
+.sort-select {
+  margin-bottom: 5px;
+}
+
+.salestools__filter_sort_trigger {
+  position: relative;
+  &:hover {
+    .fa.fa-caret-down {
+      color: white;
+    }
+  }
+  .fa {
+    margin: 0 2px;
+    font: {
+      size: $size;
+    }
+    &.active {
+      color: darken($color_2, 10%);
+    }
+    &.fa-caret-down {
+      color: $color_2;
+    }
+  }
+}
+
+.has-items {
+  &.input-active {
+    border-radius: 0;
+  }
+}
+
+.salestools__content_filter_tags {
+  margin-bottom: 20px;
+}
+
+.dropdown-menu {
+  .form-control {
+    border-radius: 0;
+    box-shadow: 0 0 0;
+    outline: none;
+  }
+}
+
+.glyphicon-ok:before {
+  content: "\f00c";
+}
+
+.glyphicon.glyphicon-ok.check-mark {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.salestools_add_tags_input {
+  margin-right: 4px;
+  margin-left: 3px;
+  width: 140px;
+  &.max {
+    width: 180px;
+  }
+  @include transition(width 0.5s ease-in-out);
+}
+
+.salestools__filter_tags {
+  position: relative;
+  margin: 10px 0;
+
+  &__autocomplete-color-cycle {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    display: block;
+    position: relative;
+    top: 17px;
+  }
+
+  .md-chips {
+    padding-bottom: 0;
+
+    &.md-focused {
+      box-shadow: none;
+    }
+
+    .md-chip-input-container {
+      margin-top: 0;
+      //margin-left: 14px;
+
+      input {
+        height: 26px;
+        line-height: 26px;
+      }
+    }
+
+    md-chips-wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    md-chip {
+      background: #e0e0e0;
+      color: #424242;
+      height: 20px;
+      line-height: 25px;
+      border-radius: 3px;
+      padding: 0 4px 2px 10px !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 8px 8px 0;
+
+      md-chip-template {
+        font: {
+          weight: bold;
+        }
+      }
+
+      &:hover {
+        opacity: .5;
+      }
+
+      .md-chip-remove-container {
+        position: static;
+        width: 16px;
+        height: 16px;
+      }
+
+      md-chip-template {
+        color: $white;
+        font-family: $family;
+        font-size: $size_sm;
+        font-weight: 400;
+      }
+
+      md-icon,
+      .md-chip-remove {
+        width: 16px;
+        height: 16px;
+        min-height: 16px;
+        min-width: 16px;
+      }
+
+      md-icon svg {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.salestools__filter_tags_list_container {
+  position: absolute;
+  display: none;
+  top: 27px;
+  width: 240px;
+  left: 3px;
+  background: white;
+  padding: 10px 0px;
+  z-index: 10;
+  @include border(1px, $grey-medium);
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.salestools__filter_tags_list {
+  li:last-child {
+    border: 0;
+    margin: 0;
+  }
+}
+
+.salestools__tag_point {
+  font: {
+    size: $size;
+  }
+  color: $textColor;
+  padding: 5px 15px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+  cursor: pointer;
+  &:hover {
+    background: $placeholder_blue;
+    color: white;
+  }
+}
+
+.color-tag {
+  width: 16px;
+  height: 16px;
+  border-radius: 90px;
+  @include border(2px, white);
+}
+
+.salestools__tag_text {
+  position: relative;
+  top: -2px;
+}
+
+.salestools_tag_append {
+  color: white;
+  cursor: pointer;
+  padding: 4px 8px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  font: {
+    size: $size_sm;
+  }
+  float: left;
+  margin: 3px 2px 8px;
+  .fa {
+    margin: 0px 0px 0 5px;
+    position: relative;
+    top: 1px;
+    right: -2px;
+  }
+}
+
+.salestools__prospect_created {
+  opacity: 0.45;
+  color: white;
+  font-size: $size_sm;
+  font-weight: 400;
+  margin-right: 34px;
+}
+
+.overflow {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.salestools_paginator_input {
+  max-width: calc(100% - 46px);
+}
+
+md-dialog {
+  max-width: 100%;
+  overflow: visible;
+  .salestools__modal_title {
+    font: {
+      size: $size_lg;
+      weight: bold;
+    }
+  }
+  &.salestools__prospect_details_modal-dialog {
+    max-height: 90%;
+    width: 90%;
+    max-width: 90%;
+    //height: 90%;
+
+    .salestools__modal {
+      background-color: transparent;
+    }
+
+    .salestools__position_prospect {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .salestools__prospect__company {
+      overflow: visible;
+    }
+
+    .salestools__container_prospects {
+      border-bottom: 1px solid #b5b5b5;
+    }
+
+    .salestools__prospect {
+      margin-bottom: 0;
+    }
+
+    .salestools__modal__body {
+      background-color: $grey-light_2;
+      padding: 7px 8px;
+    }
+    .salestools__prospect__information {
+
+      .small-icon {
+        margin-top: 2px;
+      }
+
+      p {
+        height: 16px;
+      }
+    }
+
+    .salestools__prospect__company span {
+      font-weight: bold;
+    }
+
+    .svg-close {
+      width: 26px;
+      height: 26px;
+
+      > path {
+        fill: $white;
+      }
+    }
+
+    .salestools__modal_close {
+      top: -38px;
+      right: 16px;
+    }
+
+    .md-modal,
+    .md-content {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+
+md-toolbar {
+
+}
+
+.md-toolbar-tools {
+  .fa {
+    font-size: $size_lg + 2;
+  }
+  position: relative;
+}
+
+.md-button {
+  text-transform: inherit;
+  height: 30px;
+  min-height: 30px;
+}
+
+.salestools__filtter_change_list {
+  width: 500px;
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  &.large {
+    width: 900px;
+
+    .salestools__content_filters_change {
+      width: 500px;
+      float: left;
+    }
+  }
+}
+
+.salestools__button, .md-button {
+  display: inline-block;
+  text-align: center;
+  &.blue {
+    background: $color_1;
+    color: white;
+    &:hover {
+      background: lighten($color_1, 10%);
+    }
+  }
+  .ng-scope {
+    position: relative;
+    top: -3px;
+  }
+}
+
+md-dialog .md-dialog-content {
+  padding: 20px 20px 0;
+}
+
+.salestools__search_select_container {
+  margin-bottom: 20px;
+  input {
+    background: url('../img/search-icon.png') no-repeat 98%;
+  }
+}
+
+.salestools__filter_change_ctrl_delete {
+  margin-top: 10px;
+}
+
+.salestools__filter_list {
+  background: $grey-light_2;
+  padding: 5px;
+  margin: 0 -20px;
+  height: 352px;
+  @include border-bottom(1px, $small-icon-color);
+  border-top: 1px solid $small-icon-color;
+
+  .salestools__filter_name_change_link {
+    background: white;
+    display: block;
+    border: 0;
+    margin-bottom: 3px;
+    position: relative;
+    padding: 5px 10px 0;
+    @include border-bottom(4px, lighten($grey-content-border, 10%));
+    &.change {
+      background: lighten($grey-card-active, 2%);
+      &::before {
+        content: ' ';
+        width: 2px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $green;
+      }
+    }
+  }
+}
+
+.filter_autor {
+  background: darken($grey-light_2, 5%);
+  width: 36px;
+  height: 36px;
+  margin: 2px 5px 6px 0;
+  border-radius: 90px;
+  @include border(2px, red);
+}
+
+.filter_name {
+  font: {
+    size: $size_lg;
+    weight: bold;
+  }
+  color: $textColor;
+  padding: 12px;
+}
+
+.salestools__avatar_autor_filter_img {
+  width: 100%;
+}
+
+.salestools__filter_code {
+  font-size: $size;
+  colot: $textColor;
+  clear: both;
+  margin: 0 -5px;
+  input {
+    border: 0;
+    background: lighten($grey-medium, 10%);
+    @include border-bottom(1px, darken($grey-medium, 10%));
+    color: $grey-icon;
+    font-size: $size_sm;
+
+  }
+}
+
+.salestools__filtter_save_list {
+  width: 450px;
+}
+
+.salestools__content_filter_form {
+  margin-bottom: 20px;
+}
+
+.salestools__filter_input_container {
+  width: 145px;
+  margin: 0 10px;
+}
+
+.salestools__filter__row {
+  label {
+    color: $color-small;
+    padding-top: 8px;
+    display: inline-block;
+    font: {
+      size: $size_sm;
+      weight: lighter;
+    }
+  }
+}
+
+.salestools__leads_company_filter {
+  margin-top: 5px;
+}
+
+.salestools__filter_toggle {
+  padding: 10px 0;
+}
+
+.border-filer {
+  display: inline-block;
+  width: 1px;
+  background: $bg-check-view;
+  height: 100%;
+  height: 26px;
+  float: left;
+  margin: 0 15px 0 5px;
+}
+
+.salestools__lead_header {
+  padding: 15px;
+  @include border-bottom(1px, lighten($border-modal-header, 20%));
+}
+
+.salestools__graf_statistic {
+  padding: 15px;
+  opacity: .5;
+}
+
+.salestools__lead_name {
+  font: {
+    size: $size;
+    weight: bold;
+  }
+  color: $textColor;
+}
+
+.salestools__lead_inf {
+  margin: 0 15px;
+  padding-top: 8px;
+}
+
+.salestools__small_text {
+  font: {
+    size: $size_sm;
+    weight: 200;
+  }
+  .fa, .factory {
+    font-size: $size_exlg;
+    width: 16px;
+    text-align: center;
+    margin-right: 6px;
+  }
+  margin: 5px 0;
+  &.grey {
+    color: $grey-text;
+    .fa {
+      color: $grey-text;
+    }
+  }
+  &.blue {
+    color: $color_1;
+    .fa {
+      color: $color_1;
+    }
+  }
+}
+
+.salestools__tag {
+  background: url('../img/close.png') no-repeat darken($grey-medium, 20%) 87%;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font: {
+    size: $size_sm;
+    weight: bold;
+  }
+  padding: 4.5px 7px 2px;
+  padding-right: 20px;
+  margin: 0 2px 4px;
+
+  &.add-tag {
+    padding-right: 7px;
+    background-image: none;
+    background: darken($grey-medium, 40%);
+  }
+}
+
+.salestools__lead_tag_container {
+  max-width: 310px;
+  text-align: right;
+  margin: 0 -2px;
+}
+
+.salestools__prospect-modal-tag-selector {
+  .tag-input {
+    margin-bottom: 15px;
+  }
+}
+
+.salestools__leads_lines_container {
+  padding: 15px;
+}
+
+.salestools__leads_lines_container_header {
+  text-transform: uppercase;
+  font: {
+    size: $size_lg;
+  }
+  color: $light;
+  margin-bottom: 20px;
+}
+
+.salestools__lead {
+
+}
+
+.salestools__link_list_box {
+  clear: both;
+  font: {
+    size: $size_sm;
+    weight: 200;
+  }
+  margin: 10px 15px;
+  height: 14px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: ' ';
+    top: -17px;
+    width: 1px;
+    height: 23px;
+    left: -10px;
+    background: $grey-medium;
+  }
+  &::after {
+    position: absolute;
+    content: ' ';
+    top: 6px;
+    left: -10px;
+    background: $grey-medium;
+    height: 1px;
+    width: 8px;
+  }
+  .salestools__link_lead {
+    color: $color_1;
+  }
+}
+
+.salestools__lead_list_header {
+  margin-top: 20px;
+  padding: 10px 0px;
+  background: white;
+  z-index: 9;
+  cursor: pointer;
+  position: relative;
+  @include border(1px, $border-user-team);
+  border-radius: 4px;
+  &::before {
+    position: absolute;
+    content: ' ';
+    height: 1px;
+    width: 100%;
+    background: $grey-medium;
+    top: 50%;
+    left: 0;
+  }
+}
+
+.salestools__title_link, .salestools__lead__time {
+  padding: 0 15px;
+  background: white;
+  position: relative;
+  z-index: 10;
+}
+
+.salestools__lead__time {
+  color: darken($grey-medium, 20%);
+  .fa {
+    margin-left: 5px;
+    width: 12px;
+    text-align: center;
+  }
+}
+
+.salestools__lead_list_links {
+  display: none;
+}
+
+//statistic
+
+#charts {
+  padding: 10px 0;
+}
+
+.chart {
+  display: inline-block;
+  height: 151px;
+  margin-bottom: 20px;
+}
+
+.reset {
+  padding-left: 1em;
+  font-size: smaller;
+  color: #ccc;
+}
+
+.background.bar {
+  fill: #ccc;
+}
+
+.foreground.bar {
+  fill: steelblue;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.brush rect.extent {
+  fill: steelblue;
+  fill-opacity: .125;
+}
+
+.brush .resize path {
+  fill: #eee;
+  stroke: #666;
+}
+
+#hour-chart {
+  width: 100%;
+}
+
+#delay-chart {
+  width: 100%;
+}
+
+#distance-chart {
+  width: 100%;
+}
+
+#date-chart {
+  width: 100%;
+}
+
+#flight-list {
+  width: 100%;
+}
+
+#flight-list .date,
+#flight-list .day {
+  margin-bottom: .4em;
+}
+
+#flight-list .flight {
+  line-height: 1.5em;
+  background: #eee;
+  width: 640px;
+  margin-bottom: 1px;
+}
+
+#flight-list .time {
+  color: #999;
+}
+
+#flight-list .flight div {
+  display: inline-block;
+  width: 100px;
+}
+
+#flight-list div.distance,
+#flight-list div.delay {
+  width: 160px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+#flight-list .early {
+  color: green;
+}
+
+.salestools__output_counter {
+  width: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, .6);
+  font-size: $size;
+  cursor: pointer;
+  &:hover {
+    .fa {
+      color: white;
+    }
+  }
+  .fa {
+    color: $color_2;
+    padding-top: 0px;
+  }
+  span {
+    color: white;
+    padding-top: 0px;
+    font-size: $size;
+  }
+  .circle-text {
+    background: white;
+    padding: 0 5px;
+    font: {
+      size: $size_sm;
+      weight: lighter;
+    }
+    color: $color_2;
+    border-radius: 90px;
+  }
+}
+
+$width-paginator: 320px;
+
+.salestools__left_side_header_table {
+  width: calc(100% - #{$width-paginator});
+  padding-left: 15px;
+}
+
+.salestools__right_side_header_table {
+  width: $width-paginator;
+  padding-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &_sort_pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+i.all-emails {
+  background: {
+    image: url('../img/all-emails.png');
+    size: contain;
+    repeat: no-repeat;
+  }
+  height: 18px;
+  width: 28px;
+  display: inline-block;
+}
+
+.salestools__all_emails_icon_container {
+  margin: 0 10px;
+  padding-top: 8px;
+}
+
+.salestools__remove_all-prospects {
+  margin: 0 10px;
+  padding-top: 8px;
+}
+
+i.sequences-prospect {
+  background: {
+    image: url('../img/icon-sequences.png');
+    size: contain;
+    repeat: no-repeat;
+  }
+  width: 15px !important;
+  display: inline-block;
+  height: 12px;
+}
+
+.salestools__prospect_stage {
+  color: $textColor;
+  font-size: $size_sm;
+  font-weight: 300;
+  margin-top: -16px;
+  margin-bottom: 4px;
+}
+
+.salestools__sequences_prospect_button {
+  margin: 0 9px;
+  opacity: .7;
+  position: relative;
+  float: none !important;
+  top: -3px;
+  color: $color_1;
+  margin-left: 0;
+  font: {
+    size: $size_sm;
+    weight: 700;
+    family: $family;
+  }
+
+  .salestools__sequences_prospect_count_text {
+    margin-right: 3px;
+    font: {
+      size: $size_sm;
+      weight: 300;
+    }
+    color: darken($grey-medium, 50%);
+  }
+
+  &:hover {
+    color: darken($color_1, 10%);
+  }
+
+  i {
+    @include filter(grayscale, 100%);
+    width: 16px;
+    padding-top: 4px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+  }
+  &:hover {
+    opacity: 1;
+    i {
+      @include filter(grayscale, 0);
+    }
+    .salestools__sequences_prospect_count_text {
+      color: $color_1;
+    }
+  }
+
+  &--sequences {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: -18px;
+    top: -2px;
+    line-height: 16px;
+
+    i {
+      padding-top: 0;
+      margin-left: 4px;
+    }
+  }
+}
+
+.salestools__prospect_content_responseve {
+  width: calc(100% - 70px);
+  padding-left: 15px;
+}
+
+.salestools__name_box {
+  &, p {
+    text-align: left;
+  }
+
+  &--with-stage {
+    .salestools__position_prospect {
+      margin-top: 0;
+    }
+  }
+
+}
+
+.salestools__all_emails_icon_container,
+.salestools__add_tags_button_box,
+.salestools__stage_button,
+.salestools__remove_all-prospects,
+.salestools__sequnces_button_container,
+.salestools__content_filter_export_buttons {
+  a.inactive {
+    opacity: .33;
+    cursor: default;
+  }
+}
+
+.salestools__add_to__sequence {
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+  background: {
+    image: url("../img/icon-add-to-sequences.png");
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+}
+
+.salestools__prospect_main_button {
+  width: 45px;
+  height: 82px;
+  @include flex(column, space-between, center);
+  float: left;
+}
+
+.salestools__position_prospect {
+  font: {
+    size: $size_sm;
+  }
+  @include overflow();
+  text-transform: uppercase;
+  color: lighten($textColor, 20%);
+  margin-bottom: 18px;
+  margin-top: 5px;
+
+  .salestools__prospect_details & {
+    font-weight: 300;
+    color: darken($grey-medium, 20%);
+  }
+}
+
+.salestools__spiner_load_email {
+  text-align: center;
+  width: 45px;
+  height: 40px;
+  margin-top: 13px;
+
+  svg {
+    stroke: $color_2;
+    width: 24px;
+    height: 24px;
+
+    circle {
+      stroke: $grey-medium;
+    }
+  }
+}
+
+.salestools__sequnces_button_container {
+  padding: 0;
+  .fa {
+    color: white;
+    margin-left: 2px;
+  }
+}
+
+.salestools__sequnces_button {
+  svg {
+    width: 20px;
+    height: 21px;
+    path {
+      fill: white;
+    }
+  }
+}
+
+.salestools__chnge_buttons_element {
+  .fa {
+    position: relative;
+    top: -2px;
+    color: #0f4f7b;
+    font: {
+      size: $size;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.task {
+  //content: url('../img/task.png');
+  width: 22px;
+  display: inline-block;
+
+}
+
+.salestools__minimal_button_panel_toggle {
+  i {
+    margin-right: 5px;
+  }
+  img {
+    @include filter(grayscale, 100%);
+  }
+  span {
+    position: relative;
+    bottom: 5px;
+  }
+  &:hover {
+    img {
+      @include filter(hue-rotate, 320deg);
+    }
+    span {
+      color: $color_2;
+    }
+  }
+}
+
+.send-email-svg-box {
+  width: 22px;
+  margin-right: 5px;
+}
+
+.icon-stage {
+  width: 20px;
+  height: 20px;
+  background: url('../img/target.png') no-repeat center;
+  background-size: cover;
+}
+
+.salestools__other_buttons {
+  padding: 5px 20px;
+  @include border-left(1px, rgba(255, 255, 255, .2));
+}
+
+.salestools__add_tags_button_box {
+  margin: 0 10px;
+  padding-top: 7px;
+  .fa {
+    color: white;
+    font-size: $size_exlg + 1;
+  }
+}
+
+.salestools__buttons_panel {
+  //border: 1px solid rgba(black, .2);
+  margin-top: 0px;
+  border-radius: 5px;
+  padding: 0px 6px 0px;
+  position: relative;
+  padding-right: 0px;
+}
+
+.salestools__chnge_buttons_element {
+  display: inline-block;
+  //position: absolute;
+  //top: 0;
+  //height: 100%;
+  width: 40px;
+  //right: 0px;
+  padding: 5px 2px 0;
+  //border-left: 1px solid rgba(black, .2);
+}
+
+.salestools__panel_button {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+
+  > div,
+  .salestools__stage_button,
+  a {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  a,
+  .salestools__sequnces_button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+  }
+
+  .salestools__all_emails_link {
+    position: relative;
+    top: 2px;
+  }
+}
+
+.salestools__stage_button {
+  margin: 0 10px;
+  padding-top: 6px;
+  position: relative;
+}
+
+.salestools__stage_link {
+
+}
+
+tags-selector md-autocomplete-wrap > button {
+  display: none;
+}
+
+.icon-export {
+  //content: url('../img/icon-import.png');
+  background: {
+    image: url('../img/icon-import.png');
+    size: contain;
+    repeat: no-repeat;
+  }
+  display: inline-block;
+  width: 23px;
+  height: 17px;
+}
+
+.icon-sequences {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../img/icon-sequences-white.png");
+  display: inline-block;
+  width: 20px;
+  height: 21px;
+}
+
+.salestools__export_button {
+  padding-top: 8px;
+  cursor: pointer;
+  &:hover {
+    .fa {
+      color: white;
+    }
+  }
+  .fa {
+    padding-top: 2px;
+    padding-left: 5px;
+    color: $color_2;
+    font-size: $size;
+  }
+}
+
+.invert {
+  @include filter(invert, 100%);
+}
+
+.salestools__img_export {
+  width: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: .2;
+  position: relative;
+  bottom: 2px;
+}
+
+.buttons-call {
+  padding-top: 2px;
+  font: {
+    size: $size_exlg + 4;
+  }
+  color: darken($grey-light, 20%);
+  a {
+    margin: 0 10px;
+  }
+}
+
+.button-call {
+  margin: 0 10px;
+  &:hover {
+    .fa {
+      color: $color_1;
+    }
+
+    .fill-svg {
+      fill: $color_1;
+    }
+
+  }
+}
+
+.salestools__write_email {
+  &:hover {
+    .mail-svg {
+      .fill-svg {
+        fill: $color_1;
+      }
+    }
+  }
+  .mail-svg {
+    position: relative;
+    top: 3px;
+    .fill-svg {
+      fill: darken($grey-light, 20%);
+    }
+  }
+}
+
+.salestools__company_name {
+  text-transform: uppercase;
+  font: {
+    size: $size_exlg;
+    weight: bold;
+  }
+  @include overflow-w(95%);
+}
+
+.salestools__summary_prospect {
+  font: {
+    size: $size;
+  }
+  color: $textColor;
+  text-align: justify;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  p {
+    &.overflow-h {
+      //@include overflow-h(22px);
+      height: 40px;
+      overflow: hidden;
+    }
+  }
+  a, a:active, a:focus {
+    color: $color_1;
+  }
+  a:hover {
+    color: $color_2;
+  }
+}
+
+.salestools__text_button {
+  position: relative;
+  top: -2px;
+}
+
+.read-more {
+  color: $color_1;
+  .fa {
+    position: relative;
+    top: 1.2px;
+  }
+  &:hover, &:active, &:focus {
+    color: $color_2;
+  }
+}
+
+.remove-button {
+  border: 0;
+  border-radius: 90px;
+  background: none;
+  color: darken($grey-light, 10%);
+  height: 22px;
+  padding-top: 3px;
+  &:hover {
+    background: darken($grey-light, 10%);
+    color: white;
+  }
+  .fa {
+
+  }
+}
+
+.salestools__filter_change_modal_delete {
+  padding: 8px 0px 0;
+}
+
+.salestools__open_panel_detail_filter {
+  //margin: 0 -15px;
+  padding: 6px;
+  position: absolute;
+  top: 7px;
+  right: 45px;
+  z-index: 10;
+  //background: white;
+  border-radius: 10pc;
+}
+
+.open-panel {
+  //content: url('../img/icon-eve_2.png');
+  background-image: url('../img/icon-eve_2.png');
+  background-size: cover;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  -webkit-filter: grayscale(1) invert(1) contrast(10);
+  opacity: .2;
+  //-webkit-filter: grayscale(1);
+  //opacity: .5;
+  &.active, &:hover {
+    opacity: 1;
+    //-webkit-filter: grayscale(0);
+  }
+}
+
+.salestools__prospects_textarea_modul {
+  padding: 0px;
+
+}
+
+.salestools__prospects_textarea {
+  @include border(1px, $grey-medium);
+  padding: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.salestools__stage_modal {
+  width: 700px;
+}
+
+.salestools__prospect-change {
+  display: inline-block;
+  margin: 0 2px 8px;
+  background: url('../img/close.png') no-repeat lighten(slategrey, 10%) 95%;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 2px;
+  padding-right: 20px;
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(slategrey, 20%);
+  }
+}
+
+.salestools__prospects_change_container {
+  margin: 0 -2px;
+}
+
+md-dialog md-dialog-actions {
+  padding: 0 20px;
+}
+
+.md-button:not([disabled]) {
+  &.blue {
+    background-color: $color_1;
+  }
+  &.red {
+    background-color: saturate($red_4, 0%);
+    color: white;
+  }
+  &.green {
+    background-color: $green;
+  }
+  &.yellow {
+    background-color: $yellow;
+  }
+}
+
+md-dialog md-dialog-content {
+  overflow: visible;
+}
+
+md-dialog > form {
+  overflow: visible;
+}
+
+.salestools__modal_text_inform {
+  margin-bottom: 20px;
+}
+
+.salestools__text_inform {
+  font: {
+    size: $size_exlg;
+    weight: bold;
+  }
+  color: $textColor;
+  .red {
+    color: saturate($red, 20%);
+  }
+}
+
+md-dialog {
+
+}
+
+.salestools__tags_modal_container {
+  md-chip-template {
+    strong {
+      position: relative;
+      top: -3px;
+    }
+  }
+
+  md-chips.chip-add-tag {
+    padding: 6px 6px 0;
+  }
+}
+
+.icon-delete {
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+    image: url('../img/icon-delete.png');
+  }
+  display: inline-block;
+  width: 20px;
+  height: 17px;
+
+  &--new {
+    display: inline-block;
+    // content: url('../img/icon-delete--new.png');
+    background-image: url('../img/icon-delete--new.png');
+    background-size: cover;
+    width: 22px;
+    height: 21px;
+  }
+}
+
+.md-contact-name {
+  font: {
+    size: $size_sm;
+    weight: normal;
+  }
+  color: $textColor;
+}
+
+.md-contact-chips .md-chips md-chip .md-contact-avatar {
+  border-radius: 4px;
+  width: 17px;
+  height: 17px;
+  overflow: hidden;
+  img {
+    height: 100%;
+    border-radius: 0;
+  }
+
+}
+
+.md-contact-chips .md-chips {
+  box-shadow: 0 0 0;
+  max-height: 350px;
+  overflow-y: auto;
+  background: $opacity-grey;
+  margin: 0 -20px;
+  padding: 5px 20px;
+  border-top: 1px solid rgba(black, .1);
+  border-bottom: 1px solid rgba(black, .1);
+  &.md-focused {
+    box-shadow: 0 0 0;
+  }
+
+}
+
+.salestools__header_right_block {
+  position: fixed;
+  right: 0;
+}
+
+md-autocomplete-wrap {
+  padding: 0 !important;
+}
+
+.md-chips md-chip {
+  background: white;
+  border-radius: 2px;
+  margin: 8px 8px 0 0;
+  height: 25px;
+  line-height: 1.6;
+  padding: 4px 25px 5px 5px !important;
+  .md-contact-name {
+    color: white;
+  }
+  &.md-focused, &:hover {
+    background: lighten($grey-card-active, 2%);
+  }
+  .md-contact-avatar img {
+    border-radius: 0;
+  }
+}
+
+.md-chips md-chip .md-chip-remove-container {
+  line-height: 1;
+  right: 0px;
+  top: 5px;
+}
+
+.md-chips md-chip .md-chip-remove {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  min-width: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  svg {
+    color: darken($border-big-user-team, 15%);
+  }
+}
+
+.md-contact-chips .md-chips md-chip .md-contact-name {
+  margin-left: 6px;
+  margin-right: 2px;
+  color: $textColor;
+  height: 17px;
+  position: relative;
+  bottom: 3px;
+}
+
+.md-chips md-chip .md-chip-remove md-icon {
+  position: static;
+  -webkit-transform: none;
+  transform: none;
+}
+
+md-chips md-chip md-icon {
+  color: white;
+}
+
+.md-chips md-chip ._md-chip-remove {
+  width: 22px;
+  height: 10px;
+  margin: 6px 0 0 0;
+  svg {
+    width: 15px;
+    height: 15px;
+    color: darken($border-big-user-team, 10%);
+  }
+}
+
+.md-chips md-chip ._md-chip-remove-container {
+  padding-top: 5px;
+  line-height: 0;
+}
+
+md-input-container {
+  margin: 0;
+}
+
+.salestools__stage_select_container {
+  width: 300px;
+}
+
+.salestools__change_filter__inform_side {
+  width: calc(100% - 525px);
+  float: right;
+  height: 400px;
+  //background: $grey-light;
+  //position: absolute;
+  @include border-left(1px, $grey-light);
+  top: 0px;
+  right: 0;
+  padding: 60px 15px 10px;
+  &__container_items {
+    margin: 10px 0;
+    &:not(:first-child):after {
+      display: block;
+      content: '';
+      border-bottom: solid 1px rgba(128, 128, 128, 0.2);
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  &__container_item {
+    margin: 5px 0;
+    &_label {
+      display: inline-block;
+      width: auto;
+      font-weight: bold;
+    }
+  }
+}
+
+.md-button.md-primary.btn_load_filter {
+  background: #2283C6;
+  color: white;
+  border-radius: 4px;
+  &:hover {
+    background: #0f4f7b;
+  }
+}
+
+.salestools__color_user_box {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+}
+
+.salestools__buttons_footer {
+  padding-top: 6px;
+}
+
+.salestools__border_icon {
+  display: inline-block;
+  width: 1px;
+  background: $color_2;
+  height: 20px;
+  float: left;
+  margin: 6px 5px;
+
+}
+
+.salestools__more_color_users {
+  display: inline-block;
+  float: right;
+  padding-top: 12px;
+  margin: 0 10px;
+  .fa {
+    font-size: $size_lg;
+    color: $textColor;
+  }
+}
+
+// billing style more
+
+.salestools__subscription_company_name {
+  text-transform: uppercase;
+  font: {
+    size: $size_sm;
+    weight: 200;
+  }
+  color: darken($grey-medium, 20%);
+
+}
+
+.salestools__change_subscriptions {
+  //content: url('../img/icon-change_2.png');
+  background-image: url('../img/icon-change_2.png');
+  background-size: cover;
+  width: 26px;
+  height: 26px;
+}
+
+.salestools__stop_subscriptions {
+  width: 16px;
+  height: 16px;
+  //content: url('../img/icon-stop.png');
+  background-image: url('../img/icon-stop.png');
+  background-size: cover;
+}
+
+.salestools__date_subscription {
+  position: relative;
+  top: -5px;
+  left: 5px;
+  .icon-time {
+    width: 22px;
+    height: 22px;
+    opacity: .2;
+    position: relative;
+    top: 4px;
+  }
+  .salestools__text_time {
+    font: {
+      size: $size;
+    }
+  }
+}
+
+.icon-time {
+  content: url('../img/time.png');
+  background-image: url('../img/time.png');
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  display: inline-block;
+}
+
+.icon-filter {
+  //content: url('../img/icon-filter.png');
+  background-image: url('../img/icon-filter.png');
+  background-size: cover;
+  width: 29px;
+  height: 30px;
+  opacity: .6;
+  display: block;
+}
+
+.salestools__clear_filter {
+  font: {
+    size: $size_sm;
+    weight: 200;
+  }
+
+  color: $grey-light;
+}
+
+.salestools__clear_filter.salestools__clear_filter {
+  @include interaction-color(darken($grey-medium, 10%));
+  color: darken($grey-medium, 10%);
+  padding: 5px;
+  font-size: $size_sm;
+  display: block;
+  text-transform: uppercase;
+  border-left: 1px solid $grey-medium;
+  border-top: 1px solid $grey-medium;
+}
+
+md-chips.md-default-theme .md-chips, md-chips .md-chips {
+  box-shadow: 0 0 0;
+}
+
+.icon-pdf {
+  //content: url('../img/icon-pdf.png');
+  background-image: url('../img/icon-pdf.png');;
+  background-size: cover;
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+}
+
+.salestools__pdg_generating_link {
+  background: $color_1;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 20px;
+
+}
+
+.salestools__pdg_generating_link_text {
+  color: white;
+  font: {
+    weight: lighter;
+    size: $size_sm;
+  }
+  padding-top: 2px;
+  margin-left: 6px;
+}
+
+// history block
+
+$widthAsideDate: 50px;
+
+.salestools__aside_date {
+  width: $widthAsideDate;
+  background: lighten($date-color, 30%);
+  text-align: center;
+  color: white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  @include flex-center(column);
+
+  .day {
+    font: {
+      size: $size + 5;
+    }
+  }
+  .month {
+    margin: 5px 0;
+  }
+  .year {
+
+  }
+
+  .month, .year {
+    font: {
+      size: $size_sm;
+    }
+  }
+}
+
+.salestools__subscriptions_history_item {
+  width: calc(100% - #{$widthAsideDate});
+  padding: 10px 15px;
+}
+
+// end history block
+
+.salestools__strong {
+  font: {
+    weight: bold;
+  }
+  color: $color_1;
+}
+
+.salestools__form-cansel_subscriptios {
+  .salestools__modal__prospects_notes_textarea {
+    margin-bottom: 0;
+  }
+}
+
+#subscription {
+  .modal-body {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .modal-dialog {
+    width: 1000px;
+  }
+}
+
+.salestools__subscriptions {
+  width: 33.333%;
+  min-height: 500px;
+}
+
+.salestools__subscription_title {
+  text-transform: uppercase;
+  color: $textColor;
+  font: {
+    weight: bold;
+    size: $size_lg;
+  }
+}
+
+.salestools__header_subscription {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  @include border-bottom(1px, rgba($color_1, .2));
+  margin-bottom: 20px;
+}
+
+.salestools__subscriptions__content {
+  margin: 0 -15px;
+}
+
+.salestools__section_cntent {
+
+}
+
+.salestools__text_subscription {
+  color: $textColor;
+  font: {
+    size: $size;
+    weight: 400;
+  }
+  line-height: 1.3;
+  margin-bottom: 15px;
+
+}
+
+.salestools__subscriptions__price {
+  font: {
+    size: $size-big;
+    weight: bold;
+  }
+  text-align: center;
+  color: $textColor;
+  margin-bottom: 5px;
+}
+
+.salestools__subscription__price_type {
+  color: darken($grey-light, 20%);
+  font: {
+    size: $size_lg - 1;
+    weight: bold;
+  }
+  text-align: center;
+  margin-bottom: 15px;
+
+}
+
+.salestools__new_button {
+  color: white;
+  border: 0;
+  border-radius: 2px;
+  min-width: 145px;
+  padding: 10px 15px;
+  display: inline-block;
+  font: {
+    weight: bold;
+    size: $size + 1;
+  }
+
+  &.green {
+    background: $green-grass;
+    &:hover {
+      background: darken($green-grass, 20%);
+    }
+  }
+
+  &.pink {
+    background: $pink;
+    &:hover {
+      background: darken($pink, 20%);
+    }
+  }
+
+  &.grey-disable {
+    background: $grey-medium;
+  }
+}
+
+.salestools__subscription_information {
+  text-align: center;
+  margin: 20px 0 0 0;
+  padding-top: 0px;
+  border-top: 2px solid lighten($color_1, 20%);
+  background: lighten($color_1, 30%);
+
+  .salestools__text__color {
+    margin-bottom: 10px;
+  }
+}
+
+.salestools__subscription__inf_text {
+  font: {
+    size: $size + 2;
+  }
+  line-height: 1.4;
+  color: $textColor;
+  b {
+    font: {
+      weight: bold;
+    }
+  }
+
+  &.green {
+    color: darken($green, 10%);
+  }
+}
+
+.salestols__rotate_block {
+  padding-top: 30px;
+  height: 300px;
+  background: lighten($bg-header-filter, 2.5%);
+
+  &.back-side {
+    background: $blue;
+  }
+}
+
+.salestools__subscription_list {
+  padding: 0 30px 0 70px;
+  text-align: left;
+  .salestools__subscription_point {
+    font: {
+      size: $size;
+    }
+    line-height: 1.5;
+    list-style-type: disc;
+    color: $textColor;
+  }
+}
+
+.salestools__text__color {
+  font: {
+    weight: bold;
+    size: $size;
+  }
+  color: $color_1;
+}
+
+// flip
+
+.flip-container {
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 333.33px;
+  height: 300px;
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+// add tags
+
+.md-whiteframe-1dp, .md-whiteframe-z1 {
+  box-shadow: 0 0 0;
+  padding: 0 10px;
+}
+
+md-autocomplete input:not(.md-input) {
+  @include border(1px, $grey-medium);
+}
+
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {
+  box-shadow: 0 0 0;
+  @include border(1px, $grey-light);
+}
+
+// end tags
+.salestools__more_color_users {
+  .salestools__more-color-users_list {
+    min-width: 45px;
+    padding: 0px;
+    .salestools__popover_color_user {
+      display: table-cell;
+      margin-bottom: 5px;
+      .color_user {
+        position: relative;
+        &.selected {
+          &::after {
+            content: ' ';
+            height: 3px;
+            width: 10px;
+            display: block;
+            position: absolute;
+            bottom: -5px;
+            left: calc(50% - 5px);
+            background: inherit;
+          }
+        }
+      }
+    }
+  }
+  .angular-popover {
+
+  }
+}
+
+.salestools__company__social_information {
+  width: calc(100% - 640px);
+  padding: 10px 0;
+  p {
+    margin-bottom: 8px;
+  }
+
+  & p:last-child {
+    margin-bottom: 0;
+  }
+  .small-icon.svg {
+    top: -2px;
+  }
+  .small-icon.fa {
+    top: 0;
+  }
+}
+
+.salestools__social_links {
+  width: 38px;
+  padding: 10px 9px 0;
+}
+
+.salestools__social_link {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px 2px;
+}
+
+.salestools__social_icons {
+  .salestools__social_link {
+    margin-bottom: 8px;
+  }
+}
+
+.icon-facebook, .icon-linkedin, .icon-google, .icon-twitter, .icon-google {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-bottom: 4px;
+}
+
+.icon-twitter {
+  background: {
+    image: url('../img/icon-twitter.png');
+    size: contain;
+    repeat: no-repeat;
+  }
+}
+
+.icon-facebook {
+  background: {
+    image: url('../img/icon-facebook.png');
+    size: contain;
+    repeat: no-repeat;
+  }
+}
+
+.icon-linkedin {
+  background: {
+    image: url('../img/icon-linkendin.png');
+    size: contain;
+    repeat: no-repeat;
+  }
+}
+
+.icon-google {
+  background: {
+    image: url('../img/icon-google.png');
+    size: contain;
+    repeat: no-repeat;
+  }
+}
+
+.salestools__switcher_three_positions {
+  background: $grey-medium;
+  color: white;
+  padding: 3px;
+  border-radius: 90px;
+}
+
+.salestools__switcher_position {
+  display: inline-block;
+  float: left;
+  padding: 8px 6px;
+  text-align: center;
+  width: 60px;
+  border-radius: 20px;
+  font: {
+    size: $size_sm;
+    weight: bold;
+  }
+  &.check {
+    background: $green;
+  }
+}
+
+.salestools__integration_label {
+  padding-top: 11px;
+}
+
+.salestools__switcher_radio {
+  display: none;
+}
+
+md-chips {
+
+  &.chip-add-tag {
+    padding: 0 6px;
+  }
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: darken($grey-medium, 10%);
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: $color_1;
+  margin-top: -4px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $grey-medium;
+}
+
+// FF
+
+input[type=range] {
+  /* fix for FF unable to apply focus style bug  */
+
+  /*required for proper track sizing in FF*/
+  width: 300px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 300px;
+  height: 5px;
+  background: $grey-light;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: $color_1;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+  background: $grey-medium;
+}
+
+// IE
+
+input[type=range]::-ms-track {
+  width: 300px;
+  height: 5px;
+
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 6px 0;
+
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #777;
+  border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: $grey-light;
+  border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: $color_1;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #888;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: $grey-medium;
+}
+
+//
+
+.salestools__input_range {
+  font: {
+    size: $size;
+    weight: bold;
+  }
+  border: 0;
+  background: none;
+  text-align: center;
+}
+
+.range-slider__value {
+  padding-top: 15px;
+  display: block;
+  font: {
+    size: $size;
+    weight: bold;
+  }
+}
+
+.salestools__indicator_range {
+  @include flex(row, space-between, center);
+  padding-bottom: 6px;
+
+}
+
+.salestools__indicator {
+  display: inline-block;
+  position: relative;
+  min-width: 47px;
+  font: {
+    size: $size_sm;
+  }
+  &.center {
+    text-align: center;
+  }
+
+  &.last {
+    text-align: right;
+  }
+
+  &.first {
+    text-align: left;
+  }
+}
+
+.range_label {
+  font: {
+    size: $size;
+    weight: bold;
+  }
+}
+
+.salestools__modal_set_tech {
+  color: $color_1;
+  font: {
+    size: $size;
+  }
+}
+
+.dotted_border {
+  border-bottom: 1px dotted $color_1;
+  font-weight: bold;
+}
+
+.salestools__modal_call_link {
+  color: $color_1;
+  padding: 13px 10px;
+}
+
+.salestools__company_icon {
+  background-size: contain;
+  background: {
+    repeat: no-repeat;
+    size: contain;
+    image: url("../img/placeholder-company_3.png");
+  }
+  width: 32px;
+  height: 40px;
+  opacity: .5;
+  padding-top: 0px;
+  margin-right: 4px;
+}
+
+.salestools__phone_icon {
+  //content: url('../img/phone.png');
+  background-image: url('../img/phone.png');
+  background-size: cover;
+  width: 29px;
+  height: 40px;
+  opacity: .8;
+  padding-top: 0px;
+  margin-right: 6px;
+}
+
+.salestools__lamp_icon {
+  background: {
+    image: url('../img/lamp.png');
+    repeat: no-repeat;
+    size: contain;
+  }
+  width: 38px;
+  height: 40px;
+  opacity: .8;
+  padding-top: 0px;
+  margin-right: 6px;
+}
+
+.salestools__hot_icon {
+  background: {
+    size: contain;
+    image: url('../img/hot.png');
+    repeat: no-repeat;
+  }
+  width: 32px;
+  height: 40px;
+  opacity: .8;
+  padding-top: 0px;
+  margin-right: 6px;
+
+}
+
+.salestools__company_main_inform {
+  width: calc(100% - 300px);
+}
+
+.salestools__widgets_container_responsive {
+  margin: -15px 0;
+}
+
+// settings
+
+.salestools__settings__avatar_block {
+  width: 90px;
+}
+
+.salestools__settings__color_preview {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.salestools__settings__color {
+  padding-top: 4px;
+  padding-left: 10px;
+}
+
+.salestools__settings__avater_triger {
+  img {
+    width: 100%;
+  }
+}
+
+.salestools__setiings__header {
+  margin-bottom: 20px;
+}
+
+.salestools__settings__block {
+  background: white;
+  padding: 20px;
+  margin-bottom: 5px;
+  & .salestools__content_filter_row:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.salestools__setting__big_block {
+  width: 49%;
+}
+
+.salestools__content_filter_row {
+  position: relative;
+}
+
+.salestools__settings__input_near_button {
+  input {
+    width: calc(100% - 100px);
+  }
+
+}
+
+.fix {
+  width: 85px;
+  height: 28px;
+  padding: 2px;
+}
+
+.salestools__settings__name_text {
+  font: {
+    size: $size_exlg + 2;
+    weight: bold;
+
+  }
+  color: $textColor;
+  margin-bottom: 7px;
+}
+
+.salestools__settings__company_name {
+  text-transform: uppercase;
+  font: {
+    weight: 200;
+    size: $size;
+  }
+  color: darken($grey-medium, 20%);
+}
+
+.salestools__settings__name_block {
+  padding-top: 25px;
+  padding-left: 15px;
+}
+
+#avatar-modal {
+  .modal-body {
+    padding: 10px;
+  }
+}
+
+.input_search {
+  background: url('../img/search-icon.png') no-repeat 98%;
+}
+
+.salestools__selector_header-title {
+  width: 200px;
+
+  .bootstrap-select .btn {
+    border: 0;
+  }
+
+  .btn-default {
+    color: white;
+    background: none;
+  }
+  .bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    font: {
+      size: $size_exlg;
+    }
+    display: inline-block;
+    width: auto;
+    border-bottom: 1px dotted;
+  }
+
+  .salestools__select {
+    background: none;
+  }
+  .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle,
+  .btn-group.open .dropdown-toggle {
+    background: none !important;
+    box-shadow: 0 0 0;
+    color: white;
+  }
+
+  .bootstrap-select.btn-group .dropdown-toggle .caret {
+    display: none;
+  }
+}
+
+.salestools__local_inform {
+  width: 260px;
+  a {
+    color: $color_1;
+  }
+  .salestools__link_to_map {
+    color: $color_1;
+    font: {
+      size: $size_sm;
+      weight: normal;
+    }
+    display: inline-block;
+    padding: 0;
+  }
+
+  li:hover {
+    background: none;
+  }
+
+  .salestools__location_popover_text {
+    font: {
+      size: $size;
+      weight: 200;
+    }
+    color: $grey-medium;
+    margin-bottom: 5px;
+
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+.icon-prospects {
+  background: {
+    size: contain;
+    image: url("../img/icon-user.png");
+    repeat: no-repeat;
+  }
+  height: 40px;
+  margin-right: 5px;
+  width: 47px;
+  opacity: .5;
+  display: inline-block;
+}
+
+.icon-mail {
+  background: {
+    size: contain;
+    image: url("../img/icon-mail.png");
+    repeat: no-repeat;
+  }
+  height: 16px;
+  margin-right: 10px;
+  opacity: .8;
+  width: 20px;
+}
+
+.md-text {
+  //color: white;
+  font: {
+    size: $size;
+  }
+}
+
+.salestools__delete_popover {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1;
+  position: relative;
+  color: lighten($textColor, 20%);
+  font: {
+    weight: bold;
+    size: $size;
+  }
+  a:hover {
+    color: $textColor !important;
+  }
+}
+
+.salestools__left_popover {
+  width: 150px;
+  background: white;
+  border-radius: 4px;
+  padding: 15px;
+  position: absolute;
+  z-index: 10;
+  left: -185px;
+  top: -30px;
+  box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.2);
+  &::before {
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    content: ' ';
+    position: absolute;
+    top: 13px;
+    border-left: 15px solid white;
+    right: -15px;
+  }
+
+}
+
+.md-chip-remove {
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.salestools__search_emails_modal {
+  width: 700px;
+  p {
+    font: {
+      size: $size_lg;
+      weight: normal;
+    }
+    color: darken($grey-medium, 30%);
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .salestools__link {
+    color: $color_1;
+    font: {
+      weight: bold;
+    }
+  }
+}
+
+.salestools__search_preloader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.salestools__export_fields {
+  padding: 10px 0 0;
+
+}
+
+.salestools__fiesld_in_prospects {
+  @include border-right(1px, $grey-border);
+  .salestools__fields_list {
+    padding-right: 20px;
+  }
+}
+
+.salestools__fieslds_to_export {
+  .salestools__fields_list {
+    padding-left: 20px;
+  }
+
+  .salestools__field_db {
+    .fa {
+      margin-right: 10px;
+    }
+  }
+}
+
+.salestols__export__side {
+  width: 50%;
+}
+
+.salestools__fields_list {
+  height: 300px;
+  overflow-y: auto;
+
+  .dndPlaceholder {
+    height: 43px;
+    border-bottom: 1px solid #e2e0e0;
+    clear: both;
+    background: #f5f5f5;
+  }
+}
+
+.salestools__title_export {
+  font: {
+    weight: bold;
+    size: $size;
+  }
+  color: $textColor;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.salestools__field_db {
+  padding: 14px 0;
+  @include border-bottom(1px, $grey-border);
+  color: darken($grey-medium, 60%);
+  clear: both;
+  a {
+    display: block;
+  }
+  .fa {
+    display: inline-block;
+    float: right;
+    opacity: .1;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.salestools__save-template_button {
+  color: white;
+  padding: 0 10px;
+  margin: 0 !important;
+}
+
+.salestools__footer_modal__space {
+  @include flex(row, space-between, center);
+}
+
+.md-dialog-container {
+  overflow: auto !important;
+  min-height: 100vh !important;
+  min-width: 100vw !important;
+  padding: 0px;
+
+  md-dialog {
+    border-radius: 4px;
+    overflow: hidden;
+    max-height: none;
+  }
+}
+
+md-backdrop {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+@media screen and (max-height: 768px) {
+  .md-dialog-container {
+    align-items: flex-start;
+    padding: 30px 0;
+  }
+}
+
+.salestools__subscriptions_content {
+  position: relative;
+}
+
+.salestools__prospect__stats.inline-block.pull-left {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 37%;
+}
+
+.salestools__prospect__stats {
+
+  &_arrow {
+    width: 28px;
+    height: 13px;
+    background: url('../img/icon-arrow-next.png');
+  }
+
+  &_left {
+    display: flex;
+    align-items: center;
+
+    > * + * {
+      margin-left: 20px;
+    }
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.blue {
+      span, strong {
+        color: $color_1;
+      }
+    }
+
+    span {
+      color: $tab-color;
+      font-size: $size_sm;
+      font-weight: 400;
+      margin-bottom: 7px;
+    }
+
+    i {
+      width: 40px;
+      height: 32px;
+      margin-right: 0;
+      margin-bottom: 4px;
+    }
+
+    img {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    strong {
+      color: $textColor;
+      font-size: $size_sm;
+      font-weight: normal;
+    }
+  }
+}
+
+.salestools__badge {
+  margin-right: 20px;
+
+  span {
+    display: block;
+    background-color: #bbb;
+    border-radius: 2px;
+    color: white;
+    font-size: $size_sm;
+    font-weight: 400;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 11px;
+  }
+
+  a {
+    color: #2283c6;
+    font-size: $size_sm;
+    font-weight: 700;
+  }
+}
+
+.salestools__prospect--collapsed.salestools__prospect--collapsed {
+  min-height: 51px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #efefef;
+  background-color: $white;
+
+  .salestools__prospect_left {
+    height: 51px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .salestools__prospect_right {
+    height: 51px;
+    display: flex;
+    align-items: center;
+    margin-right: 13px;
+  }
+
+  .salestools__prospect_company {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+
+    img {
+      width: 37px;
+      height: 37px;
+      margin-right: 13px;
+    }
+
+    span {
+      display: block;
+      color: #2283c6;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    small {
+      display: block;
+      color: $textColor;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .salestools__prospect__count-people {
+    svg {
+      margin-top: -2px;
+    }
+
+    span {
+      font-size: $size_sm;
+      font-weight: 600;
+    }
+  }
+
+  .salestools__prospect_indicate {
+    height: auto;
+    bottom: 1px;
+  }
+}
+
+.salestools__prospect_setmain {
+  margin-right: 19px;
+
+  a {
+    color: #2283c6;
+    font-size: $size_sm;
+    font-weight: 700;
+  }
+}
+
+.md-dialog-container md-dialog {
+  background: transparent linear-gradient(to bottom, transparent 0, transparent 50px, $white, 50px, $white);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.salestools__prospect_details .md-content {
+  box-shadow: none;
+}
+
+.salestools__container_prospects--sequences {
+  .salestools__all__inf__prospect_line > div {
+    width: 33%;
+  }
+
+  .salestools__all__inf__prospect_line > .salestools__prospect__information {
+    width: 45%;
+  }
+
+  .salestools__all__inf__prospect_line > .salestools__prospect__step-info {
+    width: 22%;
+  }
+}
+
+mdp-date-picker *, mdp-time-picker *, md-dialog * {
+  font-size: 14px;
+}
+
+.salestools__subscription_plan a i {
+  display: inline-block;
+}
+
+.salestools__main-menu_submenu_open_ul {
+  //margin-top: 49px;
+}
+
+.salestools__filter_icon_button a {
+  display: block;
+}
+
+//layout
+.salestools__row {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &_divider {
+    flex: 0 1 24px;
+  }
+
+  &_h-right {
+    justify-content: flex-end;
+  }
+}
+
+.square-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  margin: 0 7px;
+  position: relative;
+  top: 3px;
+  display: inline-block;
+}
+
+.salestools__overlay-content {
+  position: relative;
+
+  &__overlay {
+    background: $white;
+    opacity: .5;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.salestools__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  background-color: $white;
+  box-shadow: 0 10px 16px 0 rgba($black, 0.19);
+  transition: all 0.4s cubic-bezier(0.84, 0.02, 0.01, 0.94);
+
+  ul li:not(:last-child) a {
+    border-bottom: 1px solid $grey-content-border;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 17px 20px 15px;
+    font-size: $size;
+    font-weight: 400;
+    color: $textColor;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $textColor;
+    }
+
+    &:hover {
+      background-color: $grey-light;
+    }
+
+    i {
+      display: block;
+      height: 19px;
+      margin-right: 14px;
+      min-width: 23px;
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+  }
+}
+
+.salestools__header_user_block {
+  position: relative;
+  .salestools__dropdown {
+    height: auto;
+    max-height: 500px;
+    min-height: 54px;
+  }
+}
+
+.icon-profile {
+  background: url('../img/icon-profile.png');
+}
+
+.icon-feedback {
+  background: url('../img/icon-feedback.png');
+}
+
+.icon-knoweledge-base {
+  background: url('../img/icon-knoweledge-base.png');
+}
+
+.icon-road-map {
+  background: url('../img/icon-road-map.png');
+}
+
+.icon-logout {
+  background: url('../img/icon-logout.png');
+}
+
+.salestools__header_widget_notify {
+
+  .salestools__popover_content {
+    position: static;
+    border-radius: 4px;
+  }
+
+  .angular-popover {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .angular-popover-triangle:after {
+    background-color: $blue-popover-color;
+  }
+}
+
+.salestools__menu_top-block {
+  height: 48px;
+  background: $sidebar;
+}
+
+.salestools__companies {
+  .fixed-width {
+
+  }
+  .salestools__material_tabs {
+    display: flex;
+  }
+  .salestools__prospect--company {
+    flex: 1;
+    .salestools__all__inf__prospect_line {
+      //width: calc(100% - 80px);
+    }
+  }
+  .salestools__activity {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 35%;
+    width: calc(332px);
+    overflow: hidden;
+    padding-right: 17px;
+    .salestools__activity__title {
+      text-align: center;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.54);
+      text-transform: uppercase;
+      line-height: 24px;
+      padding: 12px 24px;
+    }
+    .salestools__activity__item {
+      width: 100%;
+    }
+    &:before {
+      display: none;
+    }
+    .salestools__activity__items {
+      position: relative;
+      height: calc(100vh - 195px);
+      top: 0px;
+      overflow: auto;
+      &_container {
+        position: relative;
+        &:before {
+          content: ' ';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 25px;
+          width: 1px;
+          height: 100%;
+          background-color: #d3d3d3;
+        }
+      }
+    }
+    .salestools__activity__badge {
+      margin-left: 10px;
+    }
+  }
+  & &-details__description-and-map__desc {
+    flex: 0 10 auto;
+    height: calc(100vh - 260px);
+    overflow: auto;
+    p {
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+  }
+  md-content {
+    .salestools__material_tabs {
+      md-tabs.fixed-width {
+        width: 100%;
+        md-tab-content {
+          md-content.fixed-height {
+            height: calc(100vh - 244px);
+          }
+        }
+      }
+    }
+  }
+  .salestools__technology__list {
+    height: 100%;
+    padding: 0 0 0 15px;
+  }
+}
+
+.salestools__prospect--company {
+  .salestools__all__inf__prospect_line {
+    width: calc(100% - 170px);
+  }
+  .salestools__prospect__stats.inline-block.pull-left {
+    justify-content: flex-end;
+  }
+  .salestools__prospect__stats_left {
+    margin-right: 50px;
+  }
+
+  .salestools__prospect_del_button {
+    padding-top: 6px;
+  }
+}
+
+#toast-container > div {
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 15px 15px 15px 40px;
+  background-position: 15px 15px;
+  background-size: 16px;
+
+  .toast-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+.toast {
+  &.toast-error {
+    background-color: $red;
+  }
+  &.toast-success {
+    background-color: $green-light;
+  }
+}
+
+.salestools__prospect_details {
+  .salestools__lead_tag_container {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.flex-justify {
+  justify-content: space-between;
+}
+
+.salestools__intagration_settings_button {
+  text-align: right !important;
+  padding-right: 15px !important;
+
+  .angular-popover {
+    padding: 5px 0;
+    background-color: $color_3;
+    box-shadow: none;
+  }
+  .angular-popover-triangle:after {
+    background-color: $color_3;
+  }
+}
+
+.salestools__location__popover {
+  min-width: 440px;
+  padding: 5px 10px;
+}
+
+.salestools__loacation__text {
+  margin-bottom: 10px;
+}
+
+.salestools__link_google {
+  color: $color_1 !important;
+  font: {
+    size: $size_sm;
+    weight: 600;
+  }
+}
+
+tooltip {
+
+  tip-tip {
+    font-size: 12px;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  //tip {
+  //  background: white;
+  //  color: $textColor;
+  //  box-shadow: 0 4px 6px rgba(black, .2);
+  //}
+  //&._top tip tip-arrow {
+  //  border-top-color: white;
+  //}
+  //&._bottom tip tip-arrow {
+  //  border-bottom-color: white;
+  //}
+  //&._left tip tip-arrow {
+  //  border-left-color: white;
+  //}
+  //&._right tip tip-arrow {
+  //  border-right-color: white;
+  //}
+}
+
+.salestools__prospect__settings_button {
+  tooltip {
+    display: block;
+  }
+}
+
+.icon-overview {
+  display: inline-block;
+  width: 17px;
+  height: 27px;
+  position: relative;
+  left: 0px;
+  top: 9px;
+  margin-right: 9px;
+  background: {
+    image: url("../img/icon-overview-menu.png");
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+
+}
+
+.salestools__content_settings_table .salestools__checkbox-container--triple .salestools__checkbox_view i {
+  display: inherit;
+}
+
+.salestools__prospects_textarea_modul + label {
+  margin-top: 10px;
+}
+
+.icon-github {
+  &::before {
+    content: ' ';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/icon-github.png');
+    background-size: 16px 16px;
+  }
+}
+
+.icon-xing {
+  &::before {
+    content: ' ';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/icon-xing.png');
+    background-size: 16px 16px;
+  }
+}
+
+.icon-crunchbase {
+  &::before {
+    content: ' ';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/icon-crunchbase.png');
+    background-size: 16px 16px;
+  }
+}
+
+.icon-doximitry {
+  &::before {
+    content: ' ';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/icon-doximitry.png');
+    background-size: 16px 16px;
+  }
+}
+
+.icon-sequence-white {
+  background: {
+    image: url("../img/icon-sequences-white.png");
+    repeat: no-repeat;
+    size: contain;
+  }
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  position: relative;
+  top: 1px;
+
+}
+
+.salestools__task-manager_pager_divider {
+  margin: 0 5px;
+}
+
+.salestools__prospects__export,
+.salestools__prospect__delete-button {
+  .angular-popover {
+    top: -22px !important;
+    right: 0 !important;
+    box-shadow: none;
+    background-color: $color_3;
+    min-height: 95px;
+    padding: 5px 0;
+  }
+
+  .angular-popover-triangle {
+    top: -24px !important;
+    left: 100% !important;
+    width: 45px;
+    height: 24px;
+
+    &::after {
+      margin-top: -1px;
+      background: $color_3;
+      box-shadow: none;
+      margin-left: -2px;
+    }
+  }
+
+  a {
+    @include interaction-color($white);
+    display: block;
+    color: $white;
+    font-size: $size;
+    padding: 8px 17px;
+    text-align: left;
+    width: 170px;
+    &:hover, &:focus {
+      background-color: darken($color_3, 5%);
+    }
+  }
+}
+
+.salestools__prospect__delete-button .angular-popover {
+  top: auto !important;
+  bottom: -10px !important;
+}
+
+.space-around {
+  justify-content: space-around !important;
+}
+
+.salestools__prospect_details .salestools__modal__body_prospect_details md-content {
+  background-color: transparent;
+}
+
+.salestools__prospect__stats_item > span {
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.salestools__prospect_details .md-content {
+
+  .salestools__prospect__contacts {
+    width: 30%;
+  }
+
+  .salestools__prospect__stats {
+    width: 44%;
+  }
+
+  .icon-prospects {
+    margin-top: 10px;
+    margin-bottom: 6px;
+  }
+}
+
+.icon-reload {
+  &::before {
+    content: ' ';
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    background: url('../img/icon-reload.png');
+  }
+}
+
+.icon-inbox {
+  &::before {
+    content: ' ';
+    display: inline-block;
+    width: 27px;
+    height: 19px;
+    background: url('../img/icon-inbox.png');
+  }
+}
+
+.salestools__reload-button {
+  margin-top: 3px;
+  cursor: pointer;
+
+  &__animating {
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-export-min {
+  display: inline-block;
+  background: {
+    image: url("../img/icon-export-min.png");
+    repeat: no-repeat;
+    size: contain;
+  }
+  width: 16px;
+  height: 12px;
+}
+
+.salestools__export_status {
+  background: $color_1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 16px;
+  padding: 2px;
+  text-align: center;
+}
+
+.salestools__color-picker {
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 65px;
+  }
+
+  li {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    margin-bottom: 3px;
+  }
+}
+
+.salestool__changable-avatar {
+  position: relative;
+
+  &:hover &__change {
+    opacity: 1;
+  }
+
+  &__change {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color_3, 0.8);
+    border-radius: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  &__input {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &__title {
+    @extend %text-sm;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $white;
+  }
+}

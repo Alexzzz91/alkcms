@@ -1,0 +1,53 @@
+extends ./layout/page
+
+block css
+    link(rel='stylesheet' href="/css/error.css")
+
+block title
+    title Error #{error.message}
+
+block content
+    section.section--center.mdl-grid.mdl-grid--no-spacing.mdl-shadow--2dp
+      //- .flag.note
+      //-   .flag__image.note__icon
+      //-     i.fa.fa-heart
+      //-   .flag__body.note__text
+      //-     | Default color
+      //-   a.note__close(href='#')
+      //-     i.fa.fa-times
+      //- .flag.note.note--secondary
+      //-   .flag__image.note__icon
+      //-     i.fa.fa-comment
+      //-   .flag__body.note__text
+      //-     | Secondary color
+      //-   a.note__close(href='#')
+      //-     i.fa.fa-times
+      //- .flag.note.note--success
+      //-   .flag__image.note__icon
+      //-     i.fa.fa-check
+      //-   .flag__body.note__text
+      //-     | Your thing was successful!
+      //-   a.note__close(href='#')
+      //-     i.fa.fa-times
+      //- .flag.note.note--warning
+      //-   .flag__image.note__icon
+      //-     i.fa.fa-exclamation
+      //-   .flag__body.note__text
+      //-     | Your thing was not so successful!
+      //-   a.note__close(href='#')
+      //-     i.fa.fa-times
+      .flag.note.note--error
+        .flag__image.note__icon
+          i.material-icons error
+        .flag__body.note__text
+          |  #{error.message}
+        a.note__close(href='#')
+          i.fa.fa-times
+      //- .flag.note.note--info
+      //-   .flag__image.note__icon
+      //-     i.fa.fa-info
+      //-   .flag__body.note__text
+      //-     p
+      //-       | I barely knew Philip, but as a clergyman I have no problem telling his most intimate friends all about him. Calculon is gonna kill us and it's all everybody else's fault! Is that a cooking show? When will that be? Shut up and get to the point! Bender, being God isn't easy. If you do too much, people get dependent on you, and if you do nothing, they lose hope. You have to use a light touch. Like a safecracker, or a pickpocket.
+      //-   a.note__close(href='#')
+      //-     i.fa.fa-times

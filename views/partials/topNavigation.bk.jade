@@ -1,0 +1,66 @@
+a.mdl-layout__tab(href='/') Главная
+a.mdl-layout__tab(href='/page') Динамические страницы
+each page in pages
+  a.mdl-layout__tab(href='/na_cepi/'+page.pageSlug)= page.pageName
+if user && user.usergroup && user.usergroup == 'na_cepi'
+    a.mdl-layout__tab(href='/na_cepi') На цепи
+    a.mdl-layout__tab(href='/na_cepi/questies-view') Квесты
+    a.mdl-layout__tab(href='/na_cepi/rewiews-view') Отзывы
+    a.mdl-layout__tab(href='/na_cepi/stock-view') Акции
+    a.mdl-layout__tab(href='/na_cepi/reservs-view') Бронь
+    #overlay
+if user
+    #add.mdl-button--colored.mdl-shadow--4dp.mdl-color--accent.fab.logout
+      i.material-icons.fab-icon exit_to_app
+      .materialContainer
+        p Вы точно хотите выйти?
+        a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent(href='', onclick="$('<form method=POST action=/logout>').appendTo('body').submit();return false") ДА
+        button#cancel.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored Отмена
+else
+    #overlay
+    #add.mdl-button--colored.mdl-shadow--4dp.mdl-color--accent.fab
+      i.material-icons.fab-icon add
+      .materialContainer
+        .box
+          form.form-horizontal.login-form(name='login-form')
+            .title LOGIN
+            .input
+              label(for='name') Username
+              input#name(type='text', name='username')
+              span.spin
+            .input
+              label(for='pass') Password
+              input#pass(type='password', name='password')
+              span.spin
+            .button.login
+              button#login-submit(type='submit', data-loading-text='Отправляю...')
+                span Войти
+                i.fa.fa-check
+            span.help-block.pass-forgot.error
+            a.pass-forgot(href="") Forgot your password?
+        .overbox
+          .material-button.alt-2
+            span.shape
+          form.form-horizontal.register-form(name='register-form')
+            .title REGISTER
+            .input
+              label(for='regname') Username
+              input#regname(type='text', name='regname')
+              span.spin
+            .input
+              label(for='regpass') Password
+              input#regpass(type='password', name='regpass')
+              span.spin
+            .input
+              label(for='reregpass') Repeat Password
+              input#reregpass(type='password', name='reregpass')
+              span.spin
+            .button
+              button#register-submit(type='submit', data-loading-text='Отправляю...')
+                span Далее
+                i.fa.fa-check
+            span.help-block.pass-forgot.error
+    .mdl-grid
+      .mdl-cell.mdl-cell--5-col.mdl-cell--12-col-tablet.mdl-shadow--2dp.center.m-t-100
+    script(src='/js/login-form.js')
+  

@@ -1,0 +1,259 @@
+@mixin interaction-color($hover, $active: null) {
+  @if ($active) {
+    &:hover, &:focus { color: $hover; }
+    &:active { color: $active; }
+  }
+  @else {
+    &:hover, &:focus, &:active { color: $hover; }
+  }
+}
+
+@mixin interaction-background($hover, $active: null) {
+    @if ($active) {
+      &:hover, &:focus { background: $hover; }
+      &:active { background: $active; }
+    }
+    @else {
+      &:hover, &:focus, &:active { background: $hover; }
+    }
+}
+
+@mixin link($color, $size) {
+  color: $link;
+  font: {
+    size: $size;
+    weight: normal;
+  }
+}
+
+@mixin lgText($weight) {
+  font: {
+    size: $size_lg;
+    weight: $weight;
+
+  }
+}
+
+@mixin text {
+  //color: $textColor;
+  font: {
+    weight: 500;
+    size: $size;
+  }
+}
+
+@mixin textReg {
+  font: {
+    weight: 400;
+    size: $size;
+  }
+}
+
+@mixin smallText {
+  font: {
+    weight: 300;
+    size: $size_sm;
+  }
+}
+
+@mixin border-bottom($size, $color) {
+  border-bottom: $size solid $color;
+}
+
+@mixin border-right($size, $color) {
+  border-right: $size solid $color;
+}
+
+@mixin border-left($size, $color) {
+  border-left: $size solid $color;
+}
+
+@mixin border($size, $color) {
+  border: $size solid $color;
+}
+
+@mixin shadow($arr1, $arr2, $arr3, $arr4, $arr5) {
+  box-shadow: $arr1 $arr2 $arr3 $arr4 $arr5;
+  -webkit-box-shadow: $arr1 $arr2 $arr3 $arr4 $arr5;
+  -moz-box-shadow: $arr1 $arr2 $arr3 $arr4 $arr5;
+}
+
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-property($property...) {
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+  -moz-transition-property: $duration;
+  -o-transition-property: $duration;
+  -webkit-transition-property: $duration;
+  transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function: $timing;
+  -o-transition-timing-function: $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}
+
+@mixin grayscale($n) {
+  -ms-filter: grayscale($n);
+  -webkit-filter: grayscale($n);
+  -moz-filter: grayscale($n);
+  -o-filter: grayscale($n);
+  filter: grayscale($n);
+}
+
+@mixin overflow {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+@mixin overflow-h($h) {
+  height: $h;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin overflow-w($width) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+@mixin overflow-max($width){
+  max-width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+@mixin blur($radius) {
+  -webkit-filter: blur($radius+px); /* Chrome, Safari */
+  -ms-filter: blur($radius+px); /* IE12? */
+  filter: url("data:image/svg+xml;utf8,<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"blur\"><feGaussianBlur stdDeviation=\"#{$radius}\" /></filter></svg>#blur"); /* Firefox, Safari, Chrome*/
+  filter: progid:DXImageTransform.Microsoft.Blur(Strength=$radius); /* IE9 */
+}
+
+
+@mixin flex-center($type) {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: $type;
+  -ms-flex-direction: $type;
+  flex-direction: $type;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin flex($type, $align-justify, $align-items) {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: $type;
+  -ms-flex-direction: $type;
+  flex-direction: $type;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: $align-justify;
+  -ms-flex-pack: $align-justify;
+  justify-content: $align-justify;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: $align-items;
+  -ms-flex-align: $align-items;
+  align-items: $align-items;
+}
+
+
+// https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html
+//
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+
+@mixin filter($filter-type,$filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+// from alexsander
+
+//vars
+$mc-primary-color: #0072a1;
+$mc-text-color: #444;
+
+//utils
+@mixin mc-button-with-icon($icon) {
+  &:before {
+    content: " ";
+    @include modal-company-sprite($icon);
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    margin: -2px 6px 0 0;
+  }
+}
+
+@mixin mc-company-info-icon($icon, $width: 16px, $height: 16px, $offset: null) {
+  .salestools__mc__company-info__icon {
+
+    &:before {
+      content: " ";
+      @include modal-company-sprite($icon);
+      display: block;
+      width: $width;
+      height: $height;
+      @if ($offset) {
+        position: relative;
+        left: $offset;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+%text {
+  font: $size $family;
+  color: $textColor;
+}
+
+%text-lg {
+  font: $size-lg $family;
+  color: $textColor;
+}
+
+%text-sm {
+  font: $size_sm $family;
+  color: $textColor;
+}
+
+%text-xl {
+  font: $size-exlg $family;
+  color: $textColor;
+}
+
+%bold {
+  font-weight: bold;
+}

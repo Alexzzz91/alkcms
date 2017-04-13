@@ -1,0 +1,54 @@
+nav.demo-navigation.mdl-navigation.mdl-color--blue-grey-800
+  a.mdl-navigation__link(href='/')
+    i.mdl-color-text--blue-grey-400.material-icons(role='presentation') home
+    | Главная
+  a.mdl-navigation__link(href='/')
+    i.mdl-color-text--blue-grey-400.material-icons(role='presentation') home
+    | Динамические страницы
+  each page in pages
+    a.mdl-navigation__link(href='/na_cepi/'+page.pageSlug)
+      i.mdl-color-text--blue-grey-400.material-icons(role='presentation') home
+      | #{page.pageName}
+  if user && user.usergroup && user.usergroup == 'na_cepi'
+    a.mdl-navigation__link(href='/na_cepi')
+      i.mdl-color-text--blue-grey-400.material-icons(role='presentation') home
+      | На цепи
+    a.mdl-navigation__link(href='/na_cepi/questies-view')
+      i.mdl-color-text--blue-grey-400.material-icons(role='presentation') home
+      | Квесты
+    a.mdl-navigation__link(href='/na_cepi/rewiews-view')
+      i.mdl-color-text--blue-grey-400.material-icons(role='presentation') home
+      | Отзывы
+    a.mdl-navigation__link(href='/na_cepi/stock-view')
+      i.mdl-color-text--blue-grey-400.material-icons(role='presentation') home
+      | Акции
+    a.mdl-navigation__link(href='/na_cepi/reservs-view')
+      i.mdl-color-text--blue-grey-400.material-icons(role='presentation') home
+      | Бронь
+
+  //- a.mdl-navigation__link(href='')
+  //-   i.mdl-color-text--blue-grey-400.material-icons(role='presentation') inbox
+  //-   | Inbox
+  //- a.mdl-navigation__link(href='')
+  //-   i.mdl-color-text--blue-grey-400.material-icons(role='presentation') delete
+  //-   | Trash
+  //- a.mdl-navigation__link(href='')
+  //-   i.mdl-color-text--blue-grey-400.material-icons(role='presentation') report
+  //-   | Spam
+  //- a.mdl-navigation__link(href='')
+  //-   i.mdl-color-text--blue-grey-400.material-icons(role='presentation') forum
+  //-   | Forums
+  //- a.mdl-navigation__link(href='')
+  //-   i.mdl-color-text--blue-grey-400.material-icons(role='presentation') flag
+  //-   | Updates
+  //- a.mdl-navigation__link(href='')
+  //-   i.mdl-color-text--blue-grey-400.material-icons(role='presentation') local_offer
+  //-   | Promos
+  //- a.mdl-navigation__link(href='')
+  //-   i.mdl-color-text--blue-grey-400.material-icons(role='presentation') shopping_cart
+  //-   | Purchases
+  //- a.mdl-navigation__link(href='')
+  //-   i.mdl-color-text--blue-grey-400.material-icons(role='presentation') people
+  //-   | Social
+  .mdl-layout-spacer
+include ../layout/footer

@@ -1,0 +1,42 @@
+extends ./layout/page
+
+block css
+    link(rel='stylesheet' href="/css/error.css")
+
+block title
+    title #{user.username}
+block headerTitle
+  span.mdl-layout-title Создание динамических страниц
+block content
+  script(src='/js/page-form.js')
+  section.demo-charts.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
+    .mdl-card.mdl-cell.mdl-cell--12-col
+      .mdl-card__supporting-text
+        | #{user}
+        h4 Профиль #{user.username}
+        form(name='page-form')
+          .mdl-textfield.mdl-js-textfield
+            input#name.mdl-textfield__input(type='text', name='name', value='')
+            label.mdl-textfield__label(for='name') Название страницы
+          .mdl-textfield.mdl-js-textfield
+            input#userName.mdl-textfield__input(type='text', name='userName', value='')
+            label.mdl-textfield__label(for='userName') Доступно для
+            span.mdl-textfield__error Input is not a number!
+          .mdl-textfield.mdl-js-textfield
+            input#slug.mdl-textfield__input(type='text', name='slug', value='')
+            label.mdl-textfield__label(for='slug') ссылка(на английском писать!)
+          h4 Содержание
+          .mdl-textfield.mdl-js-textfield
+            input#title.mdl-textfield__input(type='text', name='title', value='')
+            label.mdl-textfield__label(for='title') Заголовок
+          .mdl-textfield.mdl-js-textfield
+            textarea#content.mdl-textfield__input(type='text', name='content', value='')
+            label.mdl-textfield__label(for='content') Контент
+      .mdl-card__actions
+        button#btnSend.mdl-button Отправить
+    button#btn3.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon
+      i.material-icons more_vert
+    ul.mdl-menu.mdl-js-menu.mdl-menu--bottom-right(for='btn3')
+      li.mdl-menu__item Lorem
+      li.mdl-menu__item(disabled='') Ipsum
+      li.mdl-menu__item Dolor

@@ -1,0 +1,23 @@
+{
+    "servePort": 9001,
+    "apiPrefix": "http://localhost:9001",
+    "mongoose": {
+        "url": "mongodb://localhost/sites",
+        "options":{
+            "server":{
+                "socketOption":{
+                    "keepAlive": 1
+                }
+            }
+        }
+    },
+    "session":{
+        "secret": "KillerIsJim",
+        "key": "sid",
+        "cookie":{
+            "path": "/",
+            "httpOnly": true,
+            "maxAge": null
+        }
+    }
+}

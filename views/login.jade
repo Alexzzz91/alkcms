@@ -1,0 +1,16 @@
+form.form-horizontal.login-form(name='login-form')
+  .title Логин
+  .input
+    label(for='name') Имя пользователя
+    input#name(type='text', name='username')
+    span.spin
+  .input
+    label(for='pass') Пароль
+    input#pass(type='password', name='password')
+    span.spin
+  .button.login
+    button#login-submit(type='submit', data-loading-text='Отправляю...')
+      span Войти
+      i.fa.fa-check
+  span.help-block.pass-forgot.error
+  a.pass-forgot(href="") Забыли пароль?

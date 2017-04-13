@@ -1,0 +1,71 @@
+extends ./layout/page
+block css
+    link(rel='stylesheet' href="/bower_components/medium-editor/dist/css/medium-editor.min.css")
+    link(rel='stylesheet' href="/bower_components/medium-editor/dist/css/themes/default.css")
+    link(rel='stylesheet' href="/bower_components/trumbowyg/dist/ui/trumbowyg.min.css")
+block title
+    title= pageTitle
+block headerTitle
+  span.mdl-layout-title Квесты для сайта "на цепи"
+block content
+  -for(var prop in data)
+    section.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid(style="background: url(#{data[prop].image})")
+      | #{data[prop].name}
+      button#btn2.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon(data-upgraded=',MaterialButton,MaterialRipple')
+        i.material-icons more_vert
+        span.mdl-button__ripple-container
+          span.mdl-ripple.is-animating
+      .mdl-menu__container.is-upgraded.is-visible
+        .mdl-menu__outline.mdl-menu--bottom-right
+        ul.mdl-menu.mdl-js-menu.mdl-menu--bottom-right(for='btn2', data-upgraded=',MaterialMenu')
+          li.mdl-menu__item(tabindex='-1') Lorem
+          li.mdl-menu__item(disabled='', tabindex='-1') Ipsum
+          li.mdl-menu__item(tabindex='-1') Dolor
+  script(src="/bower_components/medium-editor/dist/js/medium-editor.min.js")
+  script(src="/bower_components/trumbowyg/dist/trumbowyg.min.js")
+  section.demo-charts.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
+    .mdl-card.mdl-cell.mdl-cell--12-col
+      .mdl-card__supporting-text
+        form(name="questies")
+          .alk-image-avatar
+            label(for='sample1') Изображение
+            .file-upload
+              //- button.file-upload-btn(type='button', onclick="$('.file-upload-input').trigger( 'click' )") Add Image
+              .image-upload-wrap(style="#{data.image ? 'display:none;' : ''}")
+                input#image.file-upload-input(type='file', name='image', onchange='readURL(this);', accept='image/*')
+                .drag-text
+                  h3 Перенеси сюда изображение или просто нажми сюда...
+              .file-upload-content(style="#{data.image ? 'display:block;' : ''}")
+                img.file-upload-image#image_src(src="#{data.image ? data.image : ''}", alt='your image')
+                .image-title-wrap
+                  button.remove-image(type='button', onclick='removeUpload()')
+                    | Удалить 
+                    span.image-title Uploaded Image
+          .mdl-textfield.long.mdl-js-textfield
+            input#name.mdl-textfield__input(type='text', name='name', value='#{data.name ? data.name : ""}')
+            label.mdl-textfield__label(for='name') Название квеста
+          .mdl-textfield.long.mdl-js-textfield
+            input#type.mdl-textfield__input(type='text', name='type', value='#{data.type ? data.type : ""}')
+            label.mdl-textfield__label(for='type') Тип квеста
+          .mdl-textfield.long.mdl-js-textfield
+            textarea#description.mdl-textfield__input(name="description") #{data.description ? data.description : ""}
+            label.mdl-textfield__label.description(for='description') Описание квеста
+          .mdl-textfield.long.mdl-js-textfield
+            input#time.mdl-textfield__input(type='text', name='time', value='#{data.time ? data.time : ""}')
+            label.mdl-textfield__label(for='name') Время на квест
+          .mdl-textfield.long.mdl-js-textfield
+            input#price.mdl-textfield__input(type='text', name='price', value='#{data.price ? data.price : ""}')
+            label.mdl-textfield__label(for='name') Цена полная
+          .mdl-textfield.long.mdl-js-textfield
+            input#price2.mdl-textfield__input(type='text', name='price2', value='#{data.price2 ? data.price2 : ""}')
+            label.mdl-textfield__label(for='name') Цена со скидкой
+          .mdl-textfield.long.mdl-js-textfield
+            input#difficulty_level.mdl-textfield__input(type='text', name="difficulty_level", value='#{data.difficulty_level ? data.difficulty_level : ""}')
+            label.mdl-textfield__label(for='sample4') Уровень сложности
+        if data.createdAt
+          .mdl-textfield.long.mdl-js-textfield
+            input#sample6.mdl-textfield__input(disabled='true', type='text', value='#{data.createdAt}')
+            label.mdl-textfield__label(for='sample6') Дата обновления
+      .mdl-card__actions.right-actions
+        button.mdl-button.mdl-button.mdl-js-button.mdl-button--primary#save Сохранить
+    script(src="/js/questies.js")
