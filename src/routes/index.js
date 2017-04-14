@@ -31,7 +31,6 @@ module.exports = function(app, db, pages) {
 	});
 
 	app.get('/na_cepi/info', (req, res) => {
-		//res.send('Hello world');
 		db.getInfo().then(data => res.send(data));
 	});
 
@@ -44,7 +43,6 @@ module.exports = function(app, db, pages) {
 				db.getStock().then(data => res.render('stock', {data:data}));	
 				break;
 			case 'questies-view':
-				db.getQuesties().then(function(data){console.log(data)});
 				db.getQuesties().then(data => res.render('questies', {data:data}));
 				break;
 			case 'reservs-view':
