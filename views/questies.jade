@@ -8,14 +8,30 @@ block title
 block headerTitle
   span.mdl-layout-title Квесты для сайта "на цепи"
 block content
-  -for(var prop in data)
-    section.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid(style="background: url(#{data[prop].image})")
-      | #{data[prop].name}
-      button#btn2.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon
-        i.material-icons more_vert
   script(src="/bower_components/medium-editor/dist/js/medium-editor.min.js")
   script(src="/bower_components/trumbowyg/dist/trumbowyg.min.js")
-  section.demo-charts.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
+  -for(var prop in data)
+    section.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid(data-id="#{data[prop].id}")
+      .foggy-overlay(style="background: url(#{data[prop].image})")
+      .long
+        p.name !{data[prop].name}
+      .long
+        p.type !{data[prop].type}
+      .long
+        p.description !{data[prop].description}
+      .long
+        p.time !{data[prop].time}
+      .long
+        p.price !{data[prop].price}
+      .long
+        p.price2 !{data[prop].price2}
+      .long
+        p.difficulty_level !{data[prop].difficulty_level}
+      button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.delete
+        i.material-icons clear
+      button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.edit
+        i.material-icons create
+  section.new-elem.demo-charts.mdl-color--white.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col.mdl-grid
     .mdl-card.mdl-cell.mdl-cell--12-col
       .mdl-card__supporting-text
         form(name="questies")
@@ -34,10 +50,10 @@ block content
                     | Удалить 
                     span.image-title Uploaded Image
           .mdl-textfield.long.mdl-js-textfield
-            input#name.mdl-textfield__input(type='text', name='name', value='#{data.name ? data.name : ""}')
+            input.name.mdl-textfield__input(type='text', name='name', value='#{data.name ? data.name : ""}')
             label.mdl-textfield__label(for='name') Название квеста
           .mdl-textfield.long.mdl-js-textfield
-            input#type.mdl-textfield__input(type='text', name='type', value='#{data.type ? data.type : ""}')
+            input.type.mdl-textfield__input(type='text', name='type', value='#{data.type ? data.type : ""}')
             label.mdl-textfield__label(for='type') Тип квеста
           .mdl-textfield.long.mdl-js-textfield
             textarea#description.mdl-textfield__input(name="description") #{data.description ? data.description : ""}

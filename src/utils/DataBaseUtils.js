@@ -1,9 +1,6 @@
 import mongoose from 'mongoose';
 import fs from 'fs';
-import crypto from 'crypto';
 import config from '../etc/';
-
-const md5sum = crypto.createHash('md5');
 
 import '../models/Info';
 import '../models/Questies';
@@ -53,13 +50,13 @@ export function getQuesties(){
 
 export function createQuesties(data){
 	var base64Data = data.image.replace(/^data:image\/png;base64,/, "");
-	md5sum.update(base64Data);
-	var d = md5sum.digest('hex');
-	var filename = "./public/images/"+d+'.png';
+	var time = Date.now();
+	var filename = "./public/images/"+time+'.png';
 	fs.writeFile(filename, base64Data, 'base64', (err) => {
 		if (err) throw err;
 		console.log('The file has been saved!');
 	});
+	console.log(data);
 	const questies = new Questies({
 		name: data.name,
 		type: data.type,

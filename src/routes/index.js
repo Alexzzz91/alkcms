@@ -77,6 +77,10 @@ module.exports = function(app, db, pages) {
 	app.post('/na_cepi/questies/:id', checkAuth, (req, res) =>{
 		db.updateQuesties(req.body).then(data => res.send(data));
 	});
+
+	app.delete('/na_cepi/questies/:id', checkAuth, (req, res) =>{
+		db.deleteQuesties(req.params.id).then(data => res.send(data));
+	});
 	
 	app.get('/na_cepi/reserv', (req, res) =>{
 		db.getReserv().then(data => res.send(data));
