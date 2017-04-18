@@ -1,0 +1,62 @@
+extends ./layout/page
+
+block title
+    title Админка вашего сайта!
+block css
+    link(rel='stylesheet' href="/css/frontpage1.css")
+block headerTitle
+  span.mdl-layout-title Главная страница Пожалуйста Авторизуйтесь!
+   i.material-icons trending flat
+block content
+  .key-wrapper
+    // h1>This demonsrates a problem with <a href="http://unixpapa.com/js/key.html" target="_blank">.keydown</a> and <a href="http://unixpapa.com/js/key.html" target="_blank">.keypress</a>.</h1
+    h2
+      | Click 
+      span here
+      |  before you get crazy with your keyboard.
+    input#maxlenght-150.big
+    ul
+      li.drum(data-key='1', data-code='49') 1
+      li.drum(data-key='2', data-code='50') 2
+      li.drum(data-key='3', data-code='51') 3
+      li.drum(data-key='4', data-code='52') 4
+      li.synth(data-key='5', data-code='53') a♩
+      li.synth(data-key='6', data-code='54') b♩
+      li.synth(data-key='7', data-code='55') c♩
+      li.synth(data-key='8', data-code='56') d♩
+      li.synth(data-key='9', data-code='57') e♩
+      li.synth(data-key='0', data-code='48') f♩
+      li.synth(data-key='-', data-code='173') g♩
+    ul
+      li.drum(data-key='q', data-code='81') q
+      li.drum(data-key='w', data-code='87') w
+      li.drum(data-key='e', data-code='69') e
+      li.drum(data-key='r', data-code='82') r
+      li(data-key='t', data-code='84') t
+      li.bass(data-key='y', data-code='89') y
+      li.bass(data-key='u', data-code='85') u
+      li.pad(data-key='i', data-code='73') i
+      li.pad(data-key='o', data-code='79') o
+      li.pad(data-key='p', data-code='80') p
+    ul
+      li.drum(data-key='a', data-code='65') a
+      li.drum(data-key='s', data-code='83') s
+      li.drum(data-key='d', data-code='68') d
+      li.drum(data-key='f', data-code='70') f
+      li(data-key='g', data-code='71') g
+      li.bass(data-key='h', data-code='72') h
+      li.bass(data-key='j', data-code='74') j
+      li.loop(data-key='k', data-code='75') k
+      li.loop(data-key='l', data-code='76') l
+    ul
+      li.drum(data-key='z', data-code='90') z
+      li.drum(data-key='x', data-code='88') x
+      li.drum(data-key='c', data-code='67') c
+      li.drum(data-key='v', data-code='86') v
+      li(data-key='b', data-code='66') b
+      li(data-key='n', data-code='78') n
+      li.loop(data-key='m', data-code='77') m
+      li.loop(data-key=',', data-code='188') ,
+    ul
+      li.effect(data-key='SPACE', data-code='32') SPACE
+  script(src="/js/frontpage1.js")

@@ -27,7 +27,7 @@ html(lang='en')
     link(rel='stylesheet', href='/css/styles.css')
     link(rel='stylesheet' href="/css/app.css")
     block css
-    script(src="/vendor/bower_components/jquery/dist/jquery.js")
+    script(src="/vendor/bower_components/jquery/dist/jquery.min.js")
     //- script(src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js")
     //- script(src="/vendor/bower_components/jquery-ui/jquery-ui.min.js")
     script(src='/js/material.min.js')
@@ -44,7 +44,7 @@ html(lang='en')
       }
   body
     .demo-layout.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
-      header.demo-header.mdl-layout__header.mdl-color--grey-100.mdl-color-text--grey-600
+      header.demo-header.mdl-layout__header.mdl-color--grey-100.mdl-color-text--grey-600(class=user == null ? "full-width" : "")
         .mdl-layout__header-row
           block headerTitle
           .mdl-layout-spacer
@@ -65,7 +65,7 @@ html(lang='en')
             i.material-icons.fab-icon exit_to_app
             .materialContainer
               p Вы точно хотите выйти?
-              a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent(href='', onclick="$('<form method=POST action=/logout>').appendTo('body').submit();return false") ДА
+              a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent(href='', onclick="jQuery('<form method=POST action=/logout>').appendTo('body').submit();return false") ДА
               button#cancel.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored Отмена
         else
           #overlay
@@ -112,26 +112,24 @@ html(lang='en')
                       i.fa.fa-check
                   span.help-block.pass-forgot.error
           script(src='/js/login-form.js')
-      .demo-drawer.mdl-layout__drawer.mdl-color--blue-grey-900.mdl-color-text--blue-grey-50
-        header.demo-drawer-header
-          if user
-            img.demo-avatar(src='/images/user.jpg')
-            .demo-avatar-dropdown
-              span Привет #{user.username}! hello@example.com
-              .mdl-layout-spacer
-              button#accbtn.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon
-                i.material-icons(role='presentation') arrow_drop_down
-                span.visuallyhidden Accounts
-              ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect(for='accbtn')
-                li.mdl-menu__item hello@example.com
-                li.mdl-menu__item info@example.com
-                li.mdl-menu__item
-                  i.material-icons add
-                  | Add another account...
-          else
-            h3 Привет!
-        include ../partials/topNavigation
-      main.mdl-layout__content.mdl-color--grey-100
+      if user
+        .demo-drawer.mdl-layout__drawer.mdl-color--blue-grey-900.mdl-color-text--blue-grey-50
+          header.demo-drawer-header
+              img.demo-avatar(src='/images/user.jpg')
+              .demo-avatar-dropdown
+                span Привет #{user.username}! hello@example.com
+                .mdl-layout-spacer
+                button#accbtn.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon
+                  i.material-icons(role='presentation') arrow_drop_down
+                  span.visuallyhidden Accounts
+                ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect(for='accbtn')
+                  li.mdl-menu__item hello@example.com
+                  li.mdl-menu__item info@example.com
+                  li.mdl-menu__item
+                    i.material-icons add
+                    | Add another account...
+            include ../partials/topNavigation
+      main.mdl-layout__content.mdl-color--grey-100(class=user == null ? "full-width" : "")
         .mdl-grid.demo-content
           block content
-          block features
+          block features        }

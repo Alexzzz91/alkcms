@@ -1,0 +1,26 @@
+extends ./layout/page
+
+block title
+	title Админка вашего сайта!
+block css
+	link(rel='stylesheet' href="/css/frontpage4.css")
+block headerTitle
+	span.mdl-layout-title Главная страница Пожалуйста Авторизуйтесь! 
+	i.material-icons trending flat
+block content
+	.table
+		p.message
+			| Используйте стрелки на клавиатуре для управления. 
+		.table-inner
+			span.table__goal-crease.circle
+			span.table__faceoff.table__faceoff--top-left.circle
+			span.table__faceoff.table__faceoff--bottom-left.circle
+			span.table__blue-line
+			span.table__center-line
+			span.circle
+			span.table__blue-line.table__blue-line--two
+			span.table__faceoff.table__faceoff--top-right.circle
+			span.table__faceoff.table__faceoff--bottom-right.circle
+			span.table__goal-crease.table__goal-crease--two.circle
+	canvas#canvas.table.table--canvas(tabindex='0')
+	script(src="/js/frontpage4.js")

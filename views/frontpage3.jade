@@ -1,0 +1,14 @@
+extends ./layout/page
+
+block title
+    title Админка вашего сайта!
+block css
+    link(rel='stylesheet' href="/css/frontpage3.css")
+block headerTitle
+  span.mdl-layout-title Главная страница Пожалуйста Авторизуйтесь! 
+  i.material-icons trending flat
+block content
+  h2
+  | Use arrow keys to control
+  canvas#canvas
+  script(src="/js/frontpage3.js")
