@@ -49,10 +49,11 @@ form#form button {
   transition: all 600ms cubic-bezier(0.200, 0.965, 0.000, 1.005);
 }
 
-.mdl-demo #add.fab, .fab{
+ .mdl-layout #add.fab, .fab{
   z-index: 5;
   cursor: pointer;
   border-radius: 50%;
+  position:absolute;
   // position: fixed;
   right: 400px;
   top: 100px;
@@ -64,8 +65,10 @@ form#form button {
   -webkit-transition: all 600ms cubic-bezier(0.200, 0.965, 0.000, 1.005);
   transition: all 600ms cubic-bezier(0.200, 0.965, 0.000, 1.005);
 }
-
-.mdl-demo #add.fab.active, .fab.active {
+.mdl-layout .mdl-button--icon {
+    margin-right: 80px;
+}
+ .mdl-layout #add.fab.active, .fab.active {
     cursor: default;
     background: #FFF;
     border-radius: 20px;
@@ -76,12 +79,12 @@ form#form button {
     right: calc(50% - 250px);
     background-color: white!important;
 }
-.mdl-demo #add.fab.active.logout, .fab.active.logout {
+ .mdl-layout #add.fab.active.logout, .fab.active.logout {
     border-radius: 5px;
     width: 450px;
     height: 160px;
 }
-.mdl-demo #add.fab {
+ .mdl-layout #add.fab {
     right: 40px; 
     top: 36px;
 }
